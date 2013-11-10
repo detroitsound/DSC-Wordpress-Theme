@@ -1,6 +1,7 @@
 /* Artfully masterminded by ZURB  */
 @import "settings";
 @import "foundation";
+@import "_dsc-settings.scss";
 
 // Import Each Specific Piece for SASS
 // @import "foundation/base";
@@ -16,4 +17,8 @@
 // @import "foundation/reveal";
 // @import "foundation/app";
 
-
+@import "_typography.scss";
+@import "_navigation.scss";
+@import "_grid.scss";
+@import "_elements.scss";
+@import "_comments.scss";

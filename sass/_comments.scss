@@ -1,0 +1,10 @@
+.commentlist {
+    @include innerRow();
+}
+.comment-author {
+    @include innerRow();
+}
+
+.comment {
+    @include innerRow();
+}

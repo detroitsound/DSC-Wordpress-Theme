@@ -1,0 +1,16 @@
+$red: $mainColor;
+$yellow: $secondaryColor;
+
+/* Media Query Inline
+
+    @include media-query($maxSize, $minSize) {
+            //content
+    }
+
+*/
+
+@mixin media-query($maxSize:767px, $minSize:0px) {
+    @media
+       only screen and (min-width: $minSize) and (max-width: $maxSize),
+       only screen and (min-device-width: $minSize) and (max-device-width: $maxSize) { @content; }
+}

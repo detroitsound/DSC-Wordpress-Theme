@@ -1,0 +1,21 @@
+.panel {
+    background: lighten($yellow, 15%);
+    border:     none;
+    @include border-radius(0px);
+}
+
+ul, ol, dl {
+    list-style-position: inside;
+}
+
+.search-form {
+    @include innerRow();
+    .input{
+        @include column(8, collapse);
+        @include mobileColumn(3, collapse);
+    }
+    .submit{
+        @include column(4, collapse);
+        @include mobileColumn(1, collapse);
+    }
+}

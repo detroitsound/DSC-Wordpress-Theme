@@ -52,7 +52,7 @@ function of_sanitize_multicheck( $input, $option ) {
 		}
 		foreach( $input as $key => $value ) {
 			if ( array_key_exists( $key, $option['options'] ) && $value ) {
-				$output[$key] = "1"; 
+				$output[$key] = "1";
 			}
 		}
 	}
@@ -280,7 +280,7 @@ function of_recognized_background_attachment() {
  * @return   string
  *
  */
- 
+
 function of_sanitize_hex( $hex, $default = '' ) {
 	if ( of_validate_hex( $hex ) ) {
 		return $hex;
@@ -297,7 +297,7 @@ function of_sanitize_hex( $hex, $default = '' ) {
  *
  * @return   array
  */
- 
+
 function of_recognized_font_sizes() {
 	$sizes = range( 9, 71 );
 	$sizes = apply_filters( 'of_recognized_font_sizes', $sizes );
@@ -317,15 +317,17 @@ function of_recognized_font_sizes() {
  */
 function of_recognized_font_faces() {
 	$default = array(
-		'Open Sans' => 'Open Sans',
-		'arial'     => 'Arial',
-		'verdana'   => 'Verdana, Geneva',
-		'trebuchet' => 'Trebuchet',
-		'georgia'   => 'Georgia',
-		'times'     => 'Times New Roman',
-		'tahoma'    => 'Tahoma, Geneva',
-		'palatino'  => 'Palatino',
-		'helvetica' => 'Helvetica*'
+		'Open Sans'    => 'Open Sans',
+		'arial'        => 'Arial',
+		'verdana'      => 'Verdana, Geneva',
+		'trebuchet'    => 'Trebuchet',
+		'georgia'      => 'Georgia',
+		'times'        => 'Times New Roman',
+		'tahoma'       => 'Tahoma, Geneva',
+		'palatino'     => 'Palatino',
+		'helvetica'    => 'Helvetica*',
+		'Ostrich Sans' => 'Ostrich Sans',
+		'Montserrat'   => 'Montserrat'
 		);
 	return apply_filters( 'of_recognized_font_faces', $default );
 }
@@ -357,7 +359,7 @@ function of_recognized_font_styles() {
  * @return   bool
  *
  */
- 
+
 function of_validate_hex( $hex ) {
 	$hex = trim( $hex );
 	/* Strip recognized prefixes. */
