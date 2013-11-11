@@ -1,6 +1,18 @@
 $red: $mainColor;
 $yellow: $secondaryColor;
 
+$white: #ffffff;
+$black: #000000;
+
+$grey-1: darken($white, 10%);
+$grey-2: darken($white, 20%);
+$grey-3: darken($white, 30%);
+$grey-4: darken($white, 40%);
+$grey-5: darken($white, 50%);
+$grey-6: darken($white, 60%);
+$grey-7: darken($white, 70%);
+
+
 /* Media Query Inline
 
     @include media-query($maxSize, $minSize) {

@@ -1,0 +1,66 @@
+/*
+    Example usage:
+    @include animation(spin, 2s, linear, infinite);
+ */
+
+
+@mixin animation ($animation, $duration, $timing, $iteration) {
+
+    -webkit-animation-name: $animation;
+    -webkit-animation-duration: $duration;
+    -webkit-animation-timing-function: $timing;
+    -webkit-animation-iteration-count: $iteration;
+//    -webkit-animation-fill-mode: forwards; /* this prevents the animation from restarting! */
+
+    -moz-animation-name: $animation;
+    -moz-animation-duration: $duration;
+    -moz-animation-timing-function: $timing;
+    -moz-animation-iteration-count: $iteration;
+//    -moz-animation-fill-mode: forwards; /* this prevents the animation from restarting! */
+
+    -o-animation-name: $animation;
+    -o-animation-duration: $duration;
+    -o-animation-timing-function: $timing;
+    -o-animation-iteration-count: $iteration;
+//    -o-animation-fill-mode: forwards; /* this prevents the animation from restarting! */
+
+    animation-name: $animation;
+    animation-duration: $duration;
+    animation-timing-function: $timing;
+    animation-iteration-count: $iteration;
+//    animation-fill-mode: forwards; /* this prevents the animation from restarting! */
+
+
+}
+
+@mixin keyframe ($animation_name) {
+    @-webkit-keyframes $animation_name {
+        @content;
+    }
+
+    @-moz-keyframes $animation_name {
+        @content;
+    }
+
+    @-o-keyframes $animation_name {
+        @content;
+    }
+
+    @keyframes $animation_name {
+        @content;
+    }
+}
+
+@mixin animation-delay($time: 0s) {
+    animation-delay: $time; /* W3C and Opera */
+    -o-animation-delay: $time; /* Opera */
+    -moz-animation-delay: $time; /* Firefox */
+    -webkit-animation-delay: $time; /* Safari and Chrome */
+}
+
+@mixin animation-fill-mode($mode: none) {
+    animation-fill-mode: $mode; /* W3C and Opera */
+    -o-animation-fill-mode: $mode; /* Opera */
+    -moz-animation-fill-mode: $mode; /* Firefox */
+    -webkit-animation-fill-mode: $mode; /* Safari and Chrome */
+}

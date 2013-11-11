@@ -1,0 +1,154 @@
+@import '_settings.scss';
+@import '_dsc-settings.scss';
+@import '_animation.scss';
+@import "compass/css3";
+@import "foundation";
+
+
+#content {
+    margin-top: 50px;
+}
+
+.record-player {
+    @include column(8);
+    &:hover {
+        .top {
+            .record img {
+                @include animation(rotate, 5s, linear, infinite);
+            }
+            .tone-arm {
+                .arm {
+                    @include rotate(30deg);
+                }
+            }
+        }
+        .bottom {
+            .right .record-button:nth-child(1) {
+                background: $grey-4;
+            }
+        }
+    }
+    .top {
+        @include clearfix();
+        background: $grey-2;
+        padding: 15px;
+        text-align: center;
+        position: relative;
+        .speed-adjust {
+            float: left;
+            display: block;
+            width: 30px;
+            .circle {
+                background: $black;
+                width: 30px;
+                height: 30px;
+                @include border-radius(50%);
+            }
+        }
+        .record {
+            float: left;
+            width: 75%;
+            img {
+                display: inline-block;
+                position: relative;
+                z-index: 3;
+                @include transition(.5s);
+            }
+        }
+        .tone-arm {
+            width: 98px;
+            height: 98px;
+            overflow: visible;
+            position: absolute;
+            background: $grey-1;
+            right: 15px;
+            top:   15px;
+            @include media-query(600px) {
+                width: 68px;
+                height: 68px;
+            }
+            .circle {
+                background: $grey-2;
+                width: 40px;
+                height: 40px;
+                position: absolute;
+                left: 50%;
+                top: 50%;
+                margin-left: -20px;
+                margin-top:  -20px;
+                z-index: 5;
+                @include border-radius(50%);
+            }
+            .arm {
+                position: absolute;
+                width: percentage(85/98);
+                left: 50%;
+                top: -48%;
+                margin-left: percentage(-85/196);
+                z-index: 4;
+                @include transition(1s);
+                @include transform-origin(50%, 27%);
+            }
+        }
+    }
+    .bottom {
+        background: $grey-3;
+        padding: 6px;
+        @include clearfix();
+        .record-button {
+            height: 28px;
+            width: 50px;
+            display: inline-block;
+            background: $grey-1;
+            margin: 0 5px;
+            @include transition(.2s);
+        }
+        .left {
+            text-align: left;
+            float: left;
+        }
+        .right {
+            float: right;
+            text-align: right;
+            .record-button {
+                &:nth-child(3), &:nth-child(4) {
+                    @include media-query() {
+                        display: none;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@include keyframe(rotate) {
+    0% {
+        @include rotate(0);
+    }
+    100% {
+        @include rotate(359deg);
+    }
+}
+
+.twitter {
+    @include column(4);
+    @include media-query() {
+        margin-top: 40px;
+    }
+    iframe {
+        margin: 0 auto;
+        display: block;
+    }
+}
+
+.full-list {
+    margin-top: 40px;
+    margin-bottom: 40px;
+    @include column (12);
+    h6 {
+        margin-bottom: 4px;
+    }
+    p {
+        font-size: .8em;
+    }
+}
