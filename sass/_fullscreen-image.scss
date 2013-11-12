@@ -1,0 +1,31 @@
+/*
+Sets the background image to fill the enclosing div.
+
+Format:
+
+$file: Image Name and path relative to /images
+$extention: Image expention with "."
+$retina: True/fale if the image has retina optimized verison in the format "image_name@2x"
+$ie: If the mixin is being used in a ie8 selector div (lt-ie9)
+$attachment: When attachment is set to "fixed", it will remain fixed relative to the browser window. "scroll" will move as normal.
+$position: The placement of the background in relation to its div
+
+*/
+
+@mixin fullscreen-image($file, $extention: '.jpg', $retina: false, $ie: false, $attachment: scroll, $position: center center) {
+    @if $ie == false {
+        background-image: url(#{$imagePath}#{$file}#{$extention});
+        background-attachment: $attachment;
+        background-position: $position;
+        @include background-size(cover);
+        @if $retina == true {
+            @media all and (-webkit-min-device-pixel-ratio : 1.5) {
+                background-image: url(#{$imagePath}#{$file}#{'@2x'}#{$extention});
+            }
+        }
+    }
+    @if $ie == true {
+        filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='#{$imagePath}#{$file}#{$extention}', sizingMethod='scale');
+        -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='#{$imagePath}#{$file}#{$extention}', sizingMethod='scale')";
+    }
+}
