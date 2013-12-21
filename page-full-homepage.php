@@ -17,13 +17,16 @@ Template Name: Fullscreen Homepage
 
 				</section> <!-- end article section -->
 
+                <aside class="sidebar">
+                    <?php get_sidebar('sidebar2'); // sidebar 2 ?>
+                </aside>
 
 			</article> <!-- end article -->
 
 
 			<?php endwhile; ?>
 
-			<?php else : ?>
+		<?php else : ?>
 
 			<article id="post-not-found">
 			    <header>
@@ -36,7 +39,7 @@ Template Name: Fullscreen Homepage
 			    </footer>
 			</article>
 
-			<?php endif; ?>
+		<?php endif; ?>
 
 
 	</div> <!-- end #content -->

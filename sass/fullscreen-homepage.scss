@@ -21,6 +21,8 @@ body {
     width: 100%;
     margin-top: 0px;
     padding: 10px 0;
+    position: relative;
+    z-index: 1;
     @include media-query() {
         border-color: $white;
     }
@@ -80,4 +82,65 @@ body {
             }
         }
     }
+}
+
+
+aside.sidebar {
+    margin-top: 100px;
+    @include outerRow();
+    #sidebar2 {
+        background:     rgba(#000, .5);
+        padding-top:    $columnGutter/2;
+        padding-bottom: $columnGutter/2;
+        text-align: left;
+
+        @include column(8, center);
+        h4, label {
+            color: $white;
+        }
+    }
+}
+
+#mc_signup {
+
+    .mc_form_inside {
+        @include innerRow();
+    }
+
+    .mc_merge_var {
+        @include column(9);
+    }
+    .mc_signup_submit {
+        @include column(3);
+    }
+
+    .mergeRow {
+        display: none;
+    }
+
+    #mc_message {
+        margin-bottom: 15px;
+    }
+
+    .mc_success_msg, .mc_error_msg {
+        color: white;
+        margin: 0 15px;
+        padding: 5px;
+        @include border-radius(3px);
+
+        a {
+            color: white;
+            text-decoration: underline;
+
+        }
+    }
+
+    .mc_success_msg {
+        background: green;
+    }
+
+    .mc_error_msg {
+        background: red;
+    }
+
 }

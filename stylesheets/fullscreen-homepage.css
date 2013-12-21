@@ -27,6 +27,44 @@ $attachment: When attachment is set to "fixed", it will remain fixed relative to
 $position: The placement of the background in relation to its div
 
 */
+/* line 51, ../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/zurb-foundation-3.2.5/scss/foundation/mixins/_semantic-grid.scss */
+#mc_signup .mc_merge_var, #mc_signup .mc_signup_submit {
+  float: left;
+}
+
+/* line 53, ../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/zurb-foundation-3.2.5/scss/foundation/mixins/_semantic-grid.scss */
+aside.sidebar #sidebar2 {
+  float: none;
+}
+
+/* line 55, ../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/zurb-foundation-3.2.5/scss/foundation/mixins/_semantic-grid.scss */
+aside.sidebar, #mc_signup .mc_form_inside {
+  *zoom: 1;
+}
+/* line 4, ../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/zurb-foundation-3.2.5/scss/foundation/mixins/_clearfix.scss */
+aside.sidebar:before, #mc_signup .mc_form_inside:before, aside.sidebar:after, #mc_signup .mc_form_inside:after {
+  content: " ";
+  display: table;
+}
+/* line 5, ../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/zurb-foundation-3.2.5/scss/foundation/mixins/_clearfix.scss */
+aside.sidebar:after, #mc_signup .mc_form_inside:after {
+  clear: both;
+}
+
+/* line 59, ../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/zurb-foundation-3.2.5/scss/foundation/mixins/_semantic-grid.scss */
+#mc_signup .mc_form_inside {
+  width: auto;
+  max-width: none;
+  min-width: 0;
+}
+
+/* line 62, ../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/zurb-foundation-3.2.5/scss/foundation/mixins/_semantic-grid.scss */
+aside.sidebar #sidebar2, #mc_signup .mc_merge_var, #mc_signup .mc_signup_submit {
+  position: relative;
+  min-height: 1px;
+  padding: 0 15px;
+}
+
 /* Requires: normalize.css */
 /* Global Reset & Standards ---------------------- */
 /* line 5, ../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/zurb-foundation-3.2.5/scss/foundation/common/_globals.scss */
@@ -5978,6 +6016,8 @@ body {
   width: 100%;
   margin-top: 0px;
   padding: 10px 0;
+  position: relative;
+  z-index: 1;
 }
 @media only screen and (min-width: 0px) and (max-width: 767px), only screen and (min-device-width: 0px) and (max-device-width: 767px) {
   /* line 19, ../sass/fullscreen-homepage.scss */
@@ -5985,39 +6025,39 @@ body {
     border-color: white;
   }
 }
-/* line 27, ../sass/fullscreen-homepage.scss */
+/* line 29, ../sass/fullscreen-homepage.scss */
 #top-header nav {
   border-color: white;
 }
-/* line 30, ../sass/fullscreen-homepage.scss */
+/* line 32, ../sass/fullscreen-homepage.scss */
 #top-header .menu-action a {
   color: white;
 }
 
-/* line 36, ../sass/fullscreen-homepage.scss */
+/* line 38, ../sass/fullscreen-homepage.scss */
 #menu-main-navigation {
   background: none;
 }
-/* line 39, ../sass/fullscreen-homepage.scss */
+/* line 41, ../sass/fullscreen-homepage.scss */
 #menu-main-navigation > li > a {
   color: white !important;
 }
 
-/* line 44, ../sass/fullscreen-homepage.scss */
+/* line 46, ../sass/fullscreen-homepage.scss */
 .mobile-nav-container ul.tabs li {
   border-color: white;
 }
-/* line 46, ../sass/fullscreen-homepage.scss */
+/* line 48, ../sass/fullscreen-homepage.scss */
 .mobile-nav-container ul.tabs li a {
   color: white;
 }
 
-/* line 51, ../sass/fullscreen-homepage.scss */
+/* line 53, ../sass/fullscreen-homepage.scss */
 #bottom-footer {
   display: none;
 }
 
-/* line 55, ../sass/fullscreen-homepage.scss */
+/* line 57, ../sass/fullscreen-homepage.scss */
 #content {
   position: absolute;
   top: 0px;
@@ -6026,7 +6066,7 @@ body {
   display: table;
 }
 @media only screen and (min-width: 0px) and (max-width: 767px), only screen and (min-device-width: 0px) and (max-device-width: 767px) {
-  /* line 55, ../sass/fullscreen-homepage.scss */
+  /* line 57, ../sass/fullscreen-homepage.scss */
   #content {
     position: relative;
     top: auto;
@@ -6034,13 +6074,13 @@ body {
     display: block;
   }
 }
-/* line 67, ../sass/fullscreen-homepage.scss */
+/* line 69, ../sass/fullscreen-homepage.scss */
 #content > article {
   display: table-cell;
   text-align: center;
   vertical-align: middle;
 }
-/* line 71, ../sass/fullscreen-homepage.scss */
+/* line 73, ../sass/fullscreen-homepage.scss */
 #content > article h1 {
   color: white;
   font-weight: normal;
@@ -6049,9 +6089,107 @@ body {
   text-shadow: 0px 2px 5px rgba(0, 0, 0, 0.8);
 }
 @media only screen and (min-width: 0px) and (max-width: 767px), only screen and (min-device-width: 0px) and (max-device-width: 767px) {
-  /* line 71, ../sass/fullscreen-homepage.scss */
+  /* line 73, ../sass/fullscreen-homepage.scss */
   #content > article h1 {
     font-size: 3em;
     margin-top: 35px;
   }
+}
+
+/* line 88, ../sass/fullscreen-homepage.scss */
+aside.sidebar {
+  margin-top: 100px;
+  width: 1000px;
+  max-width: 100%;
+  min-width: 768px;
+  margin: 0 auto;
+}
+@media only screen and (max-width: 767px) {
+  /* line 88, ../sass/fullscreen-homepage.scss */
+  aside.sidebar {
+    width: auto;
+    min-width: 0;
+    margin-left: 0;
+    margin-right: 0;
+  }
+}
+/* line 91, ../sass/fullscreen-homepage.scss */
+aside.sidebar #sidebar2 {
+  background: rgba(0, 0, 0, 0.5);
+  padding-top: 15px;
+  padding-bottom: 15px;
+  text-align: left;
+  margin-left: auto;
+  margin-right: auto;
+  width: 66.66667%;
+}
+@media only screen and (max-width: 767px) {
+  /* line 91, ../sass/fullscreen-homepage.scss */
+  aside.sidebar #sidebar2 {
+    float: none;
+    width: auto;
+  }
+}
+/* line 98, ../sass/fullscreen-homepage.scss */
+aside.sidebar #sidebar2 h4, aside.sidebar #sidebar2 label {
+  color: white;
+}
+
+/* line 106, ../sass/fullscreen-homepage.scss */
+#mc_signup .mc_form_inside {
+  margin: 0 -15px;
+}
+/* line 110, ../sass/fullscreen-homepage.scss */
+#mc_signup .mc_merge_var {
+  width: 75%;
+}
+@media only screen and (max-width: 767px) {
+  /* line 110, ../sass/fullscreen-homepage.scss */
+  #mc_signup .mc_merge_var {
+    float: none;
+    width: auto;
+  }
+}
+/* line 113, ../sass/fullscreen-homepage.scss */
+#mc_signup .mc_signup_submit {
+  width: 25%;
+}
+@media only screen and (max-width: 767px) {
+  /* line 113, ../sass/fullscreen-homepage.scss */
+  #mc_signup .mc_signup_submit {
+    float: none;
+    width: auto;
+  }
+}
+/* line 117, ../sass/fullscreen-homepage.scss */
+#mc_signup .mergeRow {
+  display: none;
+}
+/* line 121, ../sass/fullscreen-homepage.scss */
+#mc_signup #mc_message {
+  margin-bottom: 15px;
+}
+/* line 125, ../sass/fullscreen-homepage.scss */
+#mc_signup .mc_success_msg, #mc_signup .mc_error_msg {
+  color: white;
+  margin: 0 15px;
+  padding: 5px;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  -ms-border-radius: 3px;
+  -o-border-radius: 3px;
+  border-radius: 3px;
+}
+/* line 131, ../sass/fullscreen-homepage.scss */
+#mc_signup .mc_success_msg a, #mc_signup .mc_error_msg a {
+  color: white;
+  text-decoration: underline;
+}
+/* line 138, ../sass/fullscreen-homepage.scss */
+#mc_signup .mc_success_msg {
+  background: green;
+}
+/* line 142, ../sass/fullscreen-homepage.scss */
+#mc_signup .mc_error_msg {
+  background: red;
 }
