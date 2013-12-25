@@ -7,42 +7,98 @@
         padding:       0 $columnGutter/2;
     }
 
-    nav {
-        width:          auto;
-        overflow:       hidden;
-        display:        inline-block;
-        line-height:    38px;
-        border-top:     1px solid $red;
-        border-bottom:  1px solid $red;
-        padding:        0 $columnGutter/2;
-        margin:         30px $columnGutter/2 0;
-    }
 }
 
-#menu-main-navigation, #menu-main-navigation-2 {
-    @include innerRow();
-    background: $white;
-    text-align: center;
-    > li {
-        border:         none;
-        line-height:    40px;
-        display:        inline-block;
-        float:          none;
-        @include subheader;
-        @include transition(.2s);
-        &:hover, &.active {
-            background: $red;
+nav.main {
+    width:          auto;
+    display:        inline-block;
+    line-height:    38px;
+    border-top:     1px solid $red;
+    border-bottom:  1px solid $red;
+    padding:        0 $columnGutter/2;
+    margin:         30px $columnGutter/2 0;
+    ul {
+        list-style: none;
+        padding:    0;
+        margin:     0;
+        li {
+            float:    left;
+            position: relative;
+            z-index:  10;
+            background: $white;
+            @include subheader;
+            &:hover, &.active {
+                background: $red;
+                > a {
+                    color:  $yellow;
+                }
+
+                > .flyout-toggle span {
+                    border-top-color: $yellow;
+                }
+            }
             > a {
-                color:  $yellow !important;
+                line-height: 1.3em;
+                display:     block;
+                color:       $red;
+                padding:     10px $columnGutter/2;
+                @include transition(.2s);
+                @include media-query(867px) {
+                    font-size:  .7em;
+                    margin-top: 2px;
+                }
             }
         }
-        > a {
-            color:      $red !important;
+    }
+    > ul {
+        @include innerRow();
+        background: $white;
+        text-align: center;
+        > li {
+            border:     none;
+            display:    inline-block;
+            float:      none;
+            position:   relative;
             @include transition(.2s);
-            @include media-query(867px) {
-                font-size:  .7em;
-                margin-top: 2px;
+            > a {
+                padding-top:    0px;
+                padding-bottom: 0px;
+                min-height:     40px;
+                line-height:    40px;
             }
+        }
+    }
+
+    .flyout {
+        width:    auto;
+        position: absolute;
+        display:  none;
+        left:     0;
+        border:   1px solid $red;
+    }
+
+    .has-flyout {
+        > a {
+            position:      relative;
+            padding-right: 11px + $columnGutter/2;
+        }
+        &:hover {
+            .flyout {
+                display: block;
+            }
+        }
+    }
+
+    a.flyout-toggle {
+        position:   absolute;
+        right:      8px;
+        top:        50%;
+        margin-top: -3px;
+        line-height: 1em;
+        min-height:  0;
+        padding:     0;
+        span {
+            @include cssTriangle(5px, $red, top);
         }
     }
 }
@@ -79,6 +135,7 @@
 
 #bottom-footer {
     margin-bottom: 20px;
+    text-align:    center;
     #logo {
         width: 60px + $columnGutter;
         @include media-query() {
@@ -88,39 +145,32 @@
         }
     }
 
-    nav {
+    nav.main {
         margin-top: 17px;
-
-        li {
-            margin-left: 0px;
-            > a:first-child {
-                padding: 0 20px;
-            }
-        }
+        padding: 0px;
     }
 }
 
 
-.mobile-nav-container{
-    display:        none;
-	right:          -100%;
-	float:          left;
+.mobile-nav-container {
 	width:          100%;
+    height:         100%;
 	margin-top:     5px;
-	max-height:     0px;
 	position:       relative;
+    display:        table;
 	@include transition(.2s);
-	@include media-query() {
-	    display: block;
-	}
 	ul.tabs {
+        display:        table-cell;
+        vertical-align: middle;
+        margin-top:     0px;
     	margin-bottom:  0px;
-    	padding-bottom: 0px;
     	border-bottom:  none;
+        list-style:     none;
+        padding:        0px;
         li {
-            border-top:    1px solid $red;
             border-left:   none;
             margin-bottom: 0px;
+            padding:       10px;
             @include subheader;
             a {
                 color: $red;
@@ -132,10 +182,98 @@
 	}
 }
 
-.active #top-header{
-    padding-bottom: 0px;
-    .mobile-nav-container {
-    	right:      0;
-    	max-height: 1000px;
-	}
+.csstransforms3d {
+    #bodyWrapper {
+        &.animate {
+            position:   fixed;
+            background: $grey-1;
+            @include perspective(1500px);
+
+            #container {
+                @include transform(translateZ(-1500px) translateX(100%) rotateY(-45deg));
+                position: absolute;
+                overflow: hidden;
+                width: 100%;
+                height: 100%;
+                cursor: pointer;
+                @include backface-visibility(hidden);
+
+                &:after {
+                    opacity: 1;
+                    height: 101%;
+                    @include transition(opacity 0.3s);
+                }
+
+            }
+            #mobileMenu {
+                display: block;
+                left: 0;
+            }
+
+        }
+    }
+}
+
+.no-csstransforms3d #bodyWrapper.animate #container {
+    left: 75%;
+}
+
+
+#bodyWrapper {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+#container {
+    background: #fff;
+    min-height: 100%;
+    position: relative;
+    outline: 1px solid rgba(0,0,0,0);
+    z-index: 10;
+    @include transition(.5s);
+    @include transform-origin(50% 50%);
+
+    &:after {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 0px;
+        opacity: 0;
+        background: rgba(0,0,0,0.2);
+        @include transition( opacity 0.4s, height 0s 0.4s);
+    }
+}
+
+.modalview {
+  @include perspective(1500px);
+  .container {
+    position: absolute;
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+  }
+  #contentWrapper {
+    -webkit-transform: translateZ(-1px);
+    /* solves a rendering bug in Chrome on Windows */
+  }
+}
+
+#mobileMenu {
+    display: none;
+    position: relative;
+    float: left;
+    height: 100%;
+    width: 75%;
+    font-size: 2em;
+    @include transition(1s);
+}
+
+#wpadminbar {
+    position: fixed;
 }

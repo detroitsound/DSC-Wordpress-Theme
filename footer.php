@@ -1,15 +1,17 @@
-			<footer role="contentinfo" id="bottom-footer">
+        			<footer role="contentinfo" id="bottom-footer">
 
-                <a class="brand" id="logo" href="<?php echo get_bloginfo('url'); ?>">
-    			    <img src="<?php bloginfo( 'stylesheet_directory' ); ?>/images/logo.svg" alt="<?php bloginfo('name'); ?>" onerror="this.onerror=null; this.src='<?php bloginfo( 'stylesheet_directory' ); ?>/images/logo.png'" />
-    		    </a>
+                        <a class="brand" id="logo" href="<?php echo get_bloginfo('url'); ?>">
+            			    <img src="<?php bloginfo( 'stylesheet_directory' ); ?>/images/logo.svg" alt="<?php bloginfo('name'); ?>" onerror="this.onerror=null; this.src='<?php bloginfo( 'stylesheet_directory' ); ?>/images/logo.png'" />
+            		    </a>
 
-				<nav>
-					<?php bones_footer_links(); ?>
-				</nav>
+        				<nav class="main">
+        					<?php bones_footer_links(); ?>
+        				</nav>
 
-			</footer> <!-- end footer -->
-
+        			</footer> <!-- end footer -->
+                </div>
+            </section>
+        </div>
 
 		<!--[if lt IE 7 ]>
   			<script src="//ajax.googleapis.com/ajax/libs/chrome-frame/1.0.3/CFInstall.min.js"></script>

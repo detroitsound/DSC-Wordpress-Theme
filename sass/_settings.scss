@@ -14,10 +14,10 @@ $mainColor: #dc3f1c;
 $secondaryColor: #ebe18c;
 $alertColor: $mainColor;
 $successColor: #00c203;
-// $txtColor: #222;
-// $highlightColor: #ffff99;
-// $black: #000;
-// $white: #fff;
+$txtColor: #222;
+$highlightColor: #ffff99;
+$black: #000000;
+$white: #ffffff;
 // $shinyEdge: rgba(#fff, .5);
 // $darkEdge: rgba(#000, .2);
 
@@ -291,9 +291,9 @@ $bodyFontFamily: 'Open Sans', "HelveticaNeue-Light", "Helvetica Neue Light", "He
 
 // Media Queries
 
-// $screenSmall: 768px;
-// $screenMedium: 1279px;
-// $screenXlarge: 1441px;
+$screenSmall: 768px;
+$screenMedium: 1279px;
+$screenXlarge: 1441px;
 
 // Saving for better em-based testing
 // $screenSmall: 44em;

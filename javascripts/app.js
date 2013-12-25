@@ -69,12 +69,6 @@ jQuery(document).ready(function ($) {
       lockNavBar = true;
     });
     $('.nav-bar>li.has-flyout').addClass('is-touch');
-  } else {
-    $('.nav-bar>li.has-flyout').hover(function() {
-      $(this).children('.flyout').show();
-    }, function() {
-      $(this).children('.flyout').hide();
-    });
   }
 
   /* DISABLED BUTTONS ------------- */
@@ -82,7 +76,6 @@ jQuery(document).ready(function ($) {
   $('.button.disabled').on('click.fndtn', function (event) {
     event.preventDefault();
   });
-  
 
   /* SPLIT BUTTONS/DROPDOWNS */
   $('.button.dropdown > ul').addClass('no-hover');
@@ -113,7 +106,7 @@ jQuery(document).ready(function ($) {
   $('.button.dropdown.large > ul').css('top', largeButtonHeight);
   $('.button.dropdown.small > ul').css('top', smallButtonHeight);
   $('.button.dropdown.tiny > ul').css('top', tinyButtonHeight);
-  
+
   $('.button.dropdown.up:not(.large):not(.small):not(.tiny) > ul').css('top', 'auto').css('bottom', normalButtonHeight - 2);
   $('.button.dropdown.up.large > ul').css('top', 'auto').css('bottom', largeButtonHeight - 2);
   $('.button.dropdown.up.small > ul').css('top', 'auto').css('bottom', smallButtonHeight - 2);

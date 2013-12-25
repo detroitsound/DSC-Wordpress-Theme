@@ -160,8 +160,6 @@ function foundation_js(){
     wp_enqueue_script( 'foundation-tooltips' );
     wp_register_script( 'foundation-app', get_template_directory_uri() . '/javascripts/app.js', 'jQuery', '1.0', true );
     wp_enqueue_script( 'foundation-app' );
-    wp_register_script( 'foundation-off-canvas', get_template_directory_uri() . '/javascripts/foundation/off-canvas.js', 'jQuery', '1.0', true );
-    wp_enqueue_script( 'foundation-off-canvas' );
 }
 
 add_action('wp_enqueue_scripts', 'foundation_js');
@@ -172,6 +170,16 @@ function wp_foundation_js(){
 }
 
 add_action('wp_enqueue_scripts', 'wp_foundation_js');
+
+/* load off-canvas menu */
+function off_canvas_js(){
+    wp_register_script( 'off_canvas', get_template_directory_uri() . '/javascripts/off-canvas.js' );
+    wp_enqueue_script( 'off_canvas' );
+    wp_register_script( 'classie', get_template_directory_uri() . '/javascripts/classie.js' );
+    wp_enqueue_script( 'classie' );
+}
+
+add_action( 'wp_enqueue_scripts', 'off_canvas_js' );
 
 /************* COMMENT LAYOUT *********************/
 

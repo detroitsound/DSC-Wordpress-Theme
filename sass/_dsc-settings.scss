@@ -1,9 +1,3 @@
-$red: $mainColor;
-$yellow: $secondaryColor;
-
-$white: #ffffff;
-$black: #000000;
-
 $grey-1: darken($white, 10%);
 $grey-2: darken($white, 20%);
 $grey-3: darken($white, 30%);
@@ -14,6 +8,8 @@ $grey-7: darken($white, 70%);
 
 $imagePath: '../images/';
 
+$red: $mainColor;
+$yellow: $secondaryColor;
 
 /* Media Query Inline
 
