@@ -186,7 +186,7 @@ aside p {
 /* line 15, ../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/zurb-foundation-3.2.5/scss/foundation/common/_typography.scss */
 h1, h2, h3, h4, h5, h6 {
   font-family: "Ostrich Sans", sans-serif;
-  font-weight: bold;
+  font-weight: 400;
   font-style: normal;
   color: #222222;
   text-rendering: optimizeLegibility;

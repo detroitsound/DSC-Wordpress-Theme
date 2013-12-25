@@ -4810,6 +4810,226 @@ h1, h2, h3, h4, h5, h6 {
   font-style: normal;
 }
 
+/* line 47, ../sass/_typography.scss */
+body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, form, p, blockquote, th, td {
+  margin: 0;
+  padding: 0;
+  font-size: 14px;
+  direction: ltr;
+}
+
+/* line 54, ../sass/_typography.scss */
+p {
+  font-family: inherit;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 1.6;
+  margin-bottom: 17px;
+}
+/* line 55, ../sass/_typography.scss */
+p.lead {
+  font-size: 17.5px;
+  line-height: 1.6;
+  margin-bottom: 17px;
+}
+
+/* line 57, ../sass/_typography.scss */
+aside p {
+  font-size: 13px;
+  line-height: 1.35;
+  font-style: italic;
+}
+
+/* line 59, ../sass/_typography.scss */
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Ostrich Sans", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  color: #222222;
+  text-rendering: optimizeLegibility;
+  line-height: 1.1;
+  margin-bottom: 14px;
+  margin-top: 14px;
+}
+/* line 68, ../sass/_typography.scss */
+h1 small, h2 small, h3 small, h4 small, h5 small, h6 small {
+  font-size: 60%;
+  color: #6f6f6f;
+  line-height: 0;
+}
+
+/* line 71, ../sass/_typography.scss */
+h1 {
+  font-size: 44px;
+}
+
+/* line 72, ../sass/_typography.scss */
+h2 {
+  font-size: 37px;
+}
+
+/* line 73, ../sass/_typography.scss */
+h3 {
+  font-size: 27px;
+}
+
+/* line 74, ../sass/_typography.scss */
+h4 {
+  font-size: 23px;
+}
+
+/* line 75, ../sass/_typography.scss */
+h5 {
+  font-size: 17px;
+}
+
+/* line 76, ../sass/_typography.scss */
+h6 {
+  font-size: 14px;
+}
+
+/* line 78, ../sass/_typography.scss */
+hr {
+  border: solid #ddd;
+  border-width: 1px 0 0;
+  clear: both;
+  margin: 22px 0 21px;
+  height: 0;
+}
+
+/* line 80, ../sass/_typography.scss */
+.subheader {
+  line-height: 1.3;
+  color: #6f6f6f;
+  font-weight: 300;
+  margin-bottom: 17px;
+}
+
+/* line 82, ../sass/_typography.scss */
+em, i {
+  font-style: italic;
+  line-height: inherit;
+}
+
+/* line 83, ../sass/_typography.scss */
+strong, b {
+  font-weight: bold;
+  line-height: inherit;
+}
+
+/* line 84, ../sass/_typography.scss */
+small {
+  font-size: 60%;
+  line-height: inherit;
+}
+
+/* line 85, ../sass/_typography.scss */
+code {
+  font-weight: bold;
+  background: #ffff99;
+}
+
+/*
+ * Print styles.
+ *
+ * Inlined to avoid required HTTP connection: www.phpied.com/delay-loading-your-print-css/
+ * Credit to Paul Irish and HTML5 Boilerplate (html5boilerplate.com)
+*/
+/* line 93, ../sass/_typography.scss */
+.print-only {
+  display: none !important;
+}
+
+@media print {
+  /* line 95, ../sass/_typography.scss */
+  * {
+    background: transparent !important;
+    color: black !important;
+    box-shadow: none !important;
+    text-shadow: none !important;
+    filter: none !important;
+    -ms-filter: none !important;
+  }
+
+  /* Black prints faster: h5bp.com/s */
+  /* line 96, ../sass/_typography.scss */
+  a, a:visited {
+    text-decoration: underline;
+  }
+
+  /* line 97, ../sass/_typography.scss */
+  a[href]:after {
+    content: " (" attr(href) ")";
+  }
+
+  /* line 98, ../sass/_typography.scss */
+  abbr[title]:after {
+    content: " (" attr(title) ")";
+  }
+
+  /* line 99, ../sass/_typography.scss */
+  .ir a:after, a[href^="javascript:"]:after, a[href^="#"]:after {
+    content: "";
+  }
+
+  /* Don't show links for images, or javascript/internal links */
+  /* line 100, ../sass/_typography.scss */
+  pre, blockquote {
+    border: 1px solid #999;
+    page-break-inside: avoid;
+  }
+
+  /* line 101, ../sass/_typography.scss */
+  thead {
+    display: table-header-group;
+  }
+
+  /* h5bp.com/t */
+  /* line 102, ../sass/_typography.scss */
+  tr, img {
+    page-break-inside: avoid;
+  }
+
+  /* line 103, ../sass/_typography.scss */
+  img {
+    max-width: 100% !important;
+  }
+
+  @page {
+    margin: 0.5cm;
+}
+
+  /* line 105, ../sass/_typography.scss */
+  p, h2, h3 {
+    orphans: 3;
+    widows: 3;
+  }
+
+  /* line 106, ../sass/_typography.scss */
+  h2, h3 {
+    page-break-after: avoid;
+  }
+
+  /* line 107, ../sass/_typography.scss */
+  .hide-on-print {
+    display: none !important;
+  }
+
+  /* line 108, ../sass/_typography.scss */
+  .print-only {
+    display: block !important;
+  }
+
+  /* line 109, ../sass/_typography.scss */
+  .hide-for-print {
+    display: none !important;
+  }
+
+  /* line 110, ../sass/_typography.scss */
+  .show-for-print {
+    display: inherit !important;
+  }
+}
 /* line 1, ../sass/_navigation.scss */
 #top-header, #bottom-footer {
   width: 1000px;
