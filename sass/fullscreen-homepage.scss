@@ -2,7 +2,15 @@
 @import '_dsc-settings.scss';
 @import '_fullscreen-image.scss';
 @import "compass/css3";
-@import "foundation";
+
+@import "foundation/settings";
+@import "foundation/functions/all";
+@import "foundation/mixins/clearfix";
+@import "foundation/mixins/css-triangle";
+@import "foundation/mixins/respond-to";
+@import "foundation/mixins/semantic-grid";
+@import "foundation/components/_grid";
+@import "foundation/components/modules/_mqueries.scss";
 
 body {
     position: absolute;
@@ -14,6 +22,10 @@ body {
 
 .ie8 body {
     @include fullscreen-image(frontpage-background, '.jpg', false, true, fixed);
+}
+
+#container {
+    background: none;
 }
 
 #top-header {
@@ -35,18 +47,19 @@ body {
 }
 
 
-#menu-main-navigation {
-    background: none;
-
-    > li > a {
-        color: $white !important;
+nav.main {
+    > ul {
+        background: none;
+        > li {
+            background: none;
+           > a {
+                color: $white;
+            }
+        }
     }
-}
 
-.mobile-nav-container ul.tabs li {
-    border-color: $white;
-    a {
-        color: $white;
+    a.flyout-toggle span {
+        border-top-color: $white;
     }
 }
 
@@ -55,7 +68,7 @@ body {
 }
 
 #content {
-    position: absolute;
+    position: relative;
     top:      0px;
     height:   100%;
     width:    100%;
@@ -98,6 +111,10 @@ aside.sidebar {
         h4, label {
             color: $white;
         }
+        h4 {
+            font-size: 1.8em;
+            margin:    5px 0 0;
+        }
     }
 }
 
@@ -120,6 +137,11 @@ aside.sidebar {
 
     #mc_message {
         margin-bottom: 15px;
+    }
+
+    .mc-input {
+        height: 36px;
+        font-size: 1.2em;
     }
 
     .mc_success_msg, .mc_error_msg {
