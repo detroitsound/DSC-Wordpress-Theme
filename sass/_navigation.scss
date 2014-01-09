@@ -24,7 +24,6 @@ nav.main {
         li {
             float:    left;
             position: relative;
-            z-index:  10;
             background: $white;
             @include subheader;
             &:hover, &.active {
@@ -41,6 +40,7 @@ nav.main {
                 line-height: 1.3em;
                 display:     block;
                 color:       $red;
+                z-index:  10;
                 padding:     10px $columnGutter/2;
                 @include transition(.2s);
                 @include media-query(867px) {
@@ -74,7 +74,11 @@ nav.main {
         position: absolute;
         display:  none;
         left:     0;
+        z-index:  11;
         border:   1px solid $red;
+        > li {
+            width:      100%;
+        }
     }
 
     .has-flyout {

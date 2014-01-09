@@ -5073,29 +5073,29 @@ nav.main ul {
 nav.main ul li {
   float: left;
   position: relative;
-  z-index: 10;
   background: white;
   font-family: "Montserrat", sans-serif;
   letter-spacing: 2px;
   text-transform: uppercase;
 }
-/* line 30, ../sass/_navigation.scss */
+/* line 29, ../sass/_navigation.scss */
 nav.main ul li:hover, nav.main ul li.active {
   background: #dc3f1c;
 }
-/* line 32, ../sass/_navigation.scss */
+/* line 31, ../sass/_navigation.scss */
 nav.main ul li:hover > a, nav.main ul li.active > a {
   color: #ebe18c;
 }
-/* line 36, ../sass/_navigation.scss */
+/* line 35, ../sass/_navigation.scss */
 nav.main ul li:hover > .flyout-toggle span, nav.main ul li.active > .flyout-toggle span {
   border-top-color: #ebe18c;
 }
-/* line 40, ../sass/_navigation.scss */
+/* line 39, ../sass/_navigation.scss */
 nav.main ul li > a {
   line-height: 1.3em;
   display: block;
   color: #dc3f1c;
+  z-index: 10;
   padding: 10px 15px;
   -webkit-transition: 0.2s;
   -moz-transition: 0.2s;
@@ -5103,7 +5103,7 @@ nav.main ul li > a {
   transition: 0.2s;
 }
 @media only screen and (min-width: 0px) and (max-width: 867px), only screen and (min-device-width: 0px) and (max-device-width: 867px) {
-  /* line 40, ../sass/_navigation.scss */
+  /* line 39, ../sass/_navigation.scss */
   nav.main ul li > a {
     font-size: .7em;
     margin-top: 2px;
@@ -5139,18 +5139,23 @@ nav.main .flyout {
   position: absolute;
   display: none;
   left: 0;
+  z-index: 11;
   border: 1px solid #dc3f1c;
 }
-/* line 81, ../sass/_navigation.scss */
+/* line 79, ../sass/_navigation.scss */
+nav.main .flyout > li {
+  width: 100%;
+}
+/* line 85, ../sass/_navigation.scss */
 nav.main .has-flyout > a {
   position: relative;
   padding-right: 26px;
 }
-/* line 86, ../sass/_navigation.scss */
+/* line 90, ../sass/_navigation.scss */
 nav.main .has-flyout:hover .flyout {
   display: block;
 }
-/* line 92, ../sass/_navigation.scss */
+/* line 96, ../sass/_navigation.scss */
 nav.main a.flyout-toggle {
   position: absolute;
   right: 8px;
@@ -5160,7 +5165,7 @@ nav.main a.flyout-toggle {
   min-height: 0;
   padding: 0;
 }
-/* line 100, ../sass/_navigation.scss */
+/* line 104, ../sass/_navigation.scss */
 nav.main a.flyout-toggle span {
   content: "";
   display: block;
@@ -5170,69 +5175,69 @@ nav.main a.flyout-toggle span {
   border-color: #dc3f1c transparent transparent transparent;
 }
 
-/* line 106, ../sass/_navigation.scss */
+/* line 110, ../sass/_navigation.scss */
 #top-header {
   margin-bottom: 10px;
 }
 @media only screen and (min-width: 0px) and (max-width: 767px), only screen and (min-device-width: 0px) and (max-device-width: 767px) {
-  /* line 106, ../sass/_navigation.scss */
+  /* line 110, ../sass/_navigation.scss */
   #top-header {
     padding-bottom: 5px;
     margin-bottom: 0px;
     border-bottom: 1px solid #dc3f1c;
   }
 }
-/* line 113, ../sass/_navigation.scss */
+/* line 117, ../sass/_navigation.scss */
 #top-header #logo {
   width: 110px;
 }
 @media only screen and (min-width: 0px) and (max-width: 767px), only screen and (min-device-width: 0px) and (max-device-width: 767px) {
-  /* line 113, ../sass/_navigation.scss */
+  /* line 117, ../sass/_navigation.scss */
   #top-header #logo {
     width: 80px;
   }
 }
 @media only screen and (min-width: 0px) and (max-width: 767px), only screen and (min-device-width: 0px) and (max-device-width: 767px) {
-  /* line 120, ../sass/_navigation.scss */
+  /* line 124, ../sass/_navigation.scss */
   #top-header nav {
     display: none;
   }
 }
-/* line 126, ../sass/_navigation.scss */
+/* line 130, ../sass/_navigation.scss */
 #top-header .menu-action {
   float: right;
   margin: 0 15px;
 }
-/* line 129, ../sass/_navigation.scss */
+/* line 133, ../sass/_navigation.scss */
 #top-header .menu-action a {
   color: #dc3f1c;
   font-size: 3em;
 }
 
-/* line 136, ../sass/_navigation.scss */
+/* line 140, ../sass/_navigation.scss */
 #bottom-footer {
   margin-bottom: 20px;
   text-align: center;
 }
-/* line 139, ../sass/_navigation.scss */
+/* line 143, ../sass/_navigation.scss */
 #bottom-footer #logo {
   width: 90px;
 }
 @media only screen and (min-width: 0px) and (max-width: 767px), only screen and (min-device-width: 0px) and (max-device-width: 767px) {
-  /* line 139, ../sass/_navigation.scss */
+  /* line 143, ../sass/_navigation.scss */
   #bottom-footer #logo {
     float: none;
     margin: 0 auto;
     display: block;
   }
 }
-/* line 148, ../sass/_navigation.scss */
+/* line 152, ../sass/_navigation.scss */
 #bottom-footer nav.main {
   margin-top: 17px;
   padding: 0px;
 }
 
-/* line 155, ../sass/_navigation.scss */
+/* line 159, ../sass/_navigation.scss */
 .mobile-nav-container {
   width: 100%;
   height: 100%;
@@ -5244,7 +5249,7 @@ nav.main a.flyout-toggle span {
   -o-transition: 0.2s;
   transition: 0.2s;
 }
-/* line 162, ../sass/_navigation.scss */
+/* line 166, ../sass/_navigation.scss */
 .mobile-nav-container ul.tabs {
   display: table-cell;
   vertical-align: middle;
@@ -5254,7 +5259,7 @@ nav.main a.flyout-toggle span {
   list-style: none;
   padding: 0px;
 }
-/* line 170, ../sass/_navigation.scss */
+/* line 174, ../sass/_navigation.scss */
 .mobile-nav-container ul.tabs li {
   border-left: none;
   margin-bottom: 0px;
@@ -5263,7 +5268,7 @@ nav.main a.flyout-toggle span {
   letter-spacing: 2px;
   text-transform: uppercase;
 }
-/* line 175, ../sass/_navigation.scss */
+/* line 179, ../sass/_navigation.scss */
 .mobile-nav-container ul.tabs li a {
   color: #dc3f1c;
   background: none;
@@ -5273,7 +5278,7 @@ nav.main a.flyout-toggle span {
   box-shadow: none;
 }
 
-/* line 187, ../sass/_navigation.scss */
+/* line 191, ../sass/_navigation.scss */
 .csstransforms3d #bodyWrapper.animate {
   position: fixed;
   background: #e6e6e6;
@@ -5283,7 +5288,7 @@ nav.main a.flyout-toggle span {
   -o-perspective: 1500px;
   perspective: 1500px;
 }
-/* line 192, ../sass/_navigation.scss */
+/* line 196, ../sass/_navigation.scss */
 .csstransforms3d #bodyWrapper.animate #container {
   -webkit-transform: translateZ(-1500px) translateX(100%) rotateY(-45deg);
   -moz-transform: translateZ(-1500px) translateX(100%) rotateY(-45deg);
@@ -5301,7 +5306,7 @@ nav.main a.flyout-toggle span {
   -o-backface-visibility: hidden;
   backface-visibility: hidden;
 }
-/* line 201, ../sass/_navigation.scss */
+/* line 205, ../sass/_navigation.scss */
 .csstransforms3d #bodyWrapper.animate #container:after {
   opacity: 1;
   height: 101%;
@@ -5310,25 +5315,25 @@ nav.main a.flyout-toggle span {
   -o-transition: opacity 0.3s;
   transition: opacity 0.3s;
 }
-/* line 208, ../sass/_navigation.scss */
+/* line 212, ../sass/_navigation.scss */
 .csstransforms3d #bodyWrapper.animate #mobileMenu {
   display: block;
   left: 0;
 }
 
-/* line 217, ../sass/_navigation.scss */
+/* line 221, ../sass/_navigation.scss */
 .no-csstransforms3d #bodyWrapper.animate #container {
   left: 75%;
 }
 
-/* line 222, ../sass/_navigation.scss */
+/* line 226, ../sass/_navigation.scss */
 #bodyWrapper {
   width: 100%;
   height: 100%;
   position: relative;
 }
 
-/* line 228, ../sass/_navigation.scss */
+/* line 232, ../sass/_navigation.scss */
 #container {
   background: #fff;
   min-height: 100%;
@@ -5345,7 +5350,7 @@ nav.main a.flyout-toggle span {
   -o-transform-origin: 50% 50% 50%;
   transform-origin: 50% 50% 50%;
 }
-/* line 237, ../sass/_navigation.scss */
+/* line 241, ../sass/_navigation.scss */
 #container:after {
   content: '';
   position: absolute;
@@ -5362,7 +5367,7 @@ nav.main a.flyout-toggle span {
   transition: opacity 0.4s, height 0s 0.4s;
 }
 
-/* line 250, ../sass/_navigation.scss */
+/* line 254, ../sass/_navigation.scss */
 .modalview {
   -webkit-perspective: 1500px;
   -moz-perspective: 1500px;
@@ -5370,7 +5375,7 @@ nav.main a.flyout-toggle span {
   -o-perspective: 1500px;
   perspective: 1500px;
 }
-/* line 252, ../sass/_navigation.scss */
+/* line 256, ../sass/_navigation.scss */
 .modalview .container {
   position: absolute;
   overflow: hidden;
@@ -5380,13 +5385,13 @@ nav.main a.flyout-toggle span {
   -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
 }
-/* line 261, ../sass/_navigation.scss */
+/* line 265, ../sass/_navigation.scss */
 .modalview #contentWrapper {
   -webkit-transform: translateZ(-1px);
   /* solves a rendering bug in Chrome on Windows */
 }
 
-/* line 267, ../sass/_navigation.scss */
+/* line 271, ../sass/_navigation.scss */
 #mobileMenu {
   display: none;
   position: relative;
@@ -5400,7 +5405,7 @@ nav.main a.flyout-toggle span {
   transition: 1s;
 }
 
-/* line 277, ../sass/_navigation.scss */
+/* line 281, ../sass/_navigation.scss */
 #wpadminbar {
   position: fixed;
 }
