@@ -6,27 +6,38 @@
 
 					<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 
-					<article id="post-<?php the_ID(); ?>" <?php post_class('clearfix'); ?> role="article" itemscope itemtype="http://schema.org/BlogPosting">
+					<article id="post-<?php the_ID(); ?>" <?php post_class('clearfix'); ?> role="article" itemscope itemtype="http://schema.org/CreativeWork">
 
 						<header>
 
-							<?php the_post_thumbnail( 'wpbs-featured' ); ?>
+							<?php the_post_thumbnail( 'wpbs-featured', array('itemprop' => 'image' ) ); ?>
 
-							<h1 class="single-title" itemprop="headline"><?php the_title(); ?></h1>
+							<h1 class="single-title" itemprop="name"><?php the_title(); ?></h1>
 
 							<p class="meta"><?php _e("Posted", "bonestheme"); ?> <time datetime="<?php echo the_time('Y-m-j'); ?>" pubdate><?php the_time('F jS, Y'); ?></time> <?php _e("by", "bonestheme"); ?> <?php the_author_posts_link(); ?> <span class="amp">&</span> <?php _e("filed under", "bonestheme"); ?> <?php the_category(', '); ?>.</p>
 
 						</header> <!-- end article header -->
 
-						<section class="post_content clearfix" itemprop="articleBody">
+						<section class="post_content clearfix" itemprop="about">
 							<?php the_content(); ?>
 
 
 						</section> <!-- end article section -->
 
+                        <section class="meta">
+                            <ul class="metadata">
+                                <li>
+                                    <?php
+                                        $artifact_metadata_array = get_post_custom($post->ID);
+                                        print_artifact_metadata('date', $artifact_metadata_array);
+                                    ?>
+                                </li>
+                            </ul>
+                        </section>
+
 						<footer>
 
-							<?php the_tags('<p class="tags"><span class="tags-title">Tags:</span> ', ' ', '</p>'); ?>
+							<?php the_tags('<p class="tags" itemprop="keywords"><span class="tags-title">Tags:</span> ', ' ', '</p>'); ?>
 
 						</footer> <!-- end article footer -->
 
