@@ -142,13 +142,24 @@ $artifact_metadata_fields = array(
 
 function print_artifact_metadata($id, $artifact_metadata_array) {
     global $artifact_metadata_fields;
-    if ($artifact_metadata_fields[$id]['metadata']) {
-        echo '<strong class="artifact-metadata" itemprop="'.$artifact_metadata_fields[$id]['metadata'].'">';
+    echo '<strong>'.$artifact_metadata_fields[$id]['label'].':</strong>';
+    // Printing out metadata item prop
+    if (array_key_exists('itemprop', $artifact_metadata_fields[$id])) {
+        echo '<span itemprop="'.$artifact_metadata_fields[$id]['itemprop'].'">';
     }
     else {
-        echo'<strong class="artifact-metadata">';
+        echo'<span>';
     }
-    echo $artifact_metadata_fields[$id]['label'].':</strong>'.$artifact_metadata_array['artifact_metadata_'.$id][0];
+    // Printing out correct format for date
+    if ($artifact_metadata_fields[$id]['type'] = 'date' ) {
+        $datetime = new DateTime($artifact_metadata_array['artifact_metadata_'.$id][0]);
+        echo $datetime->format('Y-m-d');
+        echo '</span>';
+    }
+    else {
+        echo $artifact_metadata_array['artifact_metadata_'.$id][0].'</span>';
+    }
+
 }
 
 
