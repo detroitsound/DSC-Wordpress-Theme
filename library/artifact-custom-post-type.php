@@ -142,6 +142,7 @@ $artifact_metadata_fields = array(
 
 function print_artifact_metadata($id, $artifact_metadata_array) {
     global $artifact_metadata_fields;
+    global $prefix;
     echo '<strong>'.$artifact_metadata_fields[$id]['label'].':</strong>';
     // Printing out metadata item prop
     if (array_key_exists('itemprop', $artifact_metadata_fields[$id])) {
@@ -151,17 +152,42 @@ function print_artifact_metadata($id, $artifact_metadata_array) {
         echo'<span>';
     }
     // Printing out correct format for date
-    if ($artifact_metadata_fields[$id]['type'] = 'date' ) {
-        $datetime = new DateTime($artifact_metadata_array['artifact_metadata_'.$id][0]);
+    if ($artifact_metadata_fields[$id]['type'] == 'date' ) {
+        $datetime = new DateTime($artifact_metadata_array[$prefix.$id][0]);
         echo $datetime->format('Y-m-d');
         echo '</span>';
     }
     else {
-        echo $artifact_metadata_array['artifact_metadata_'.$id][0].'</span>';
+        echo $artifact_metadata_array[$prefix.$id][0].'</span>';
     }
 
 }
 
+// checks if metadata exists
+function check_artifact_metadata($id, $artifact_metadata_array) {
+    global $artifact_metadata_fields;
+    global $prefix;
+
+    if ($artifact_metadata_array[$prefix.$id][0]) {
+        return true;
+    }
+    else {
+        return false;
+    }
+}
+
+function print_all_artifact_metadata($artifact_metadata_array) {
+    global $artifact_metadata_fields;
+    global $prefix;
+
+    foreach ($artifact_metadata_fields as $field_name => $field) {
+        if (check_artifact_metadata($field_name, $artifact_metadata_array)) {
+            echo '<div class="metadata-item '.$field_name.'">';
+            print_artifact_metadata($field_name, $artifact_metadata_array);
+            echo '</div>';
+        }
+    }
+}
 
 // The Callback
 function show_artifact_metadata() {
@@ -252,4 +278,10 @@ function add_custom_scripts() {
     echo $output;
 }
 add_action('admin_head','add_custom_scripts');
+
+function share_formats() {
+  register_taxonomy_for_object_type('Formats', 'Artifacts');
+}
+add_action( 'init', 'share_formats');
+
 ?>

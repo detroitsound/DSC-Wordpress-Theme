@@ -14,6 +14,7 @@ require_once('library/plugins.php');          // plugins & extra functions (opti
 require_once('library/artifact-custom-post-type.php'); // Artifact Custom Post Type
 require_once('library/formats-custom-taxonomy.php'); // Formats Custom Taxonomy
 require_once('library/collections-custom-taxonomy.php'); // Collections Custom Taxonomy
+require_once('library/required-plugins.php'); //Plugins required for the theme
 
 // Options panel
 require_once('library/options-panel.php');
@@ -35,8 +36,9 @@ add_filter('admin_footer_text', 'bones_custom_admin_footer');
 /************* THUMBNAIL SIZE OPTIONS *************/
 
 // Thumbnail sizes
-add_image_size( 'wpf-featured', 639, 300, true );
+add_image_size( 'wpf-featured', 737, 365, true );
 add_image_size ( 'wpf-home-featured', 970, 364, true );
+add_image_size( 'artifact-archive-thumb', 300, 300, true );
 add_image_size( 'bones-thumb-600', 600, 150, false );
 add_image_size( 'bones-thumb-300', 300, 100, true );
 /*
@@ -69,8 +71,8 @@ function bones_register_sidebars() {
     	'description' => 'Used on every page BUT the homepage page template.',
     	'before_widget' => '<div id="%1$s" class="widget %2$s">',
     	'after_widget' => '</div>',
-    	'before_title' => '<h4 class="widgettitle">',
-    	'after_title' => '</h4>',
+    	'before_title' => '<h5 class="widgettitle">',
+    	'after_title' => '</h5>',
     ));
 
     register_sidebar(array(
@@ -81,6 +83,16 @@ function bones_register_sidebars() {
     	'after_widget' => '</div>',
     	'before_title' => '<h4 class="widgettitle">',
     	'after_title' => '</h4>',
+    ));
+
+    register_sidebar(array(
+        'id' => 'artifact-sidebar',
+        'name' => 'artifact-sidebar',
+        'description' => 'Used only on the artifact archive.',
+        'before_widget' => '<div id="%1$s" class="widget %2$s">',
+        'after_widget' => '</div>',
+        'before_title' => '<h5 class="widgettitle">',
+        'after_title' => '</h5>',
     ));
 
     /*
@@ -236,18 +248,6 @@ function add_class_comments($classes){
     return $classes;
 }
 add_filter('comment_class', 'add_class_comments');
-
-/************* SEARCH FORM LAYOUT *****************/
-
-// Search Form
-function bones_wpsearch($form) {
-    $form = '<form role="search" method="get" id="searchform" action="' . home_url( '/' ) . '" >
-    <label class="screen-reader-text" for="s">' . __('Search for:', 'bonestheme') . '</label>
-    <input type="text" value="' . get_search_query() . '" name="s" id="s" placeholder="Search the Site..." />
-    <input type="submit" id="searchsubmit" value="'. esc_attr__('Search') .'" />
-    </form>';
-    return $form;
-} // don't remove this bracket!
 
 /****************** password protected post form *****/
 

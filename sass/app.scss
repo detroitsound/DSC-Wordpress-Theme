@@ -35,7 +35,7 @@
 
 // Control which components you get if customizing
 
-@import "foundation/components/modules/buttons";
+
 // @import "foundation/components/modules/tabs";
 // @import "foundation/components/modules/ui";
 // @import "foundation/components/modules/topbar";
@@ -43,6 +43,7 @@
 // @import "foundation/components/modules/orbit";
 // @import "foundation/components/modules/reveal";
 
+@import "_buttons.scss";
 @import "_typography.scss";
 @import "_navigation.scss";
 @import "_grid.scss";
@@ -50,3 +51,5 @@
 @import "_comments.scss";
 @import "_animation.scss";
 @import "_fullscreen-image.scss";
+@import "_posts.scss";
+@import "_artifact.scss";

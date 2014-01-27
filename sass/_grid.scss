@@ -11,3 +11,37 @@
 #content {
     @include outerRow();
 }
+
+#main {
+    @include column(9);
+}
+
+aside.sidebar {
+    @include column(3);
+}
+
+@mixin columnWidth($width) {
+    width:    $width;
+    float:    left;
+    display:  block;
+    position: relative;
+    padding:  0 $columnGutter/2;
+    @include media-query() {
+        width: 100%;
+        float: none;
+    }
+}
+
+@mixin pushWidth($distance) {
+    left: $distance;
+    @include media-query() {
+        left: 0;
+    }
+}
+
+@mixin pullWidth($distance) {
+    right: $distance;
+    @include media-query() {
+        right: 0;
+    }
+}

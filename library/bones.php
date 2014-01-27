@@ -87,8 +87,6 @@ function bones_theme_support() {
 add_action('after_setup_theme','bones_theme_support');
 // adding sidebars to Wordpress (these are created in functions.php)
 add_action( 'widgets_init', 'bones_register_sidebars' );
-// adding the bones search form (created in functions.php)
-add_filter( 'get_search_form', 'bones_wpsearch' );
 
 function bones_main_nav() {
 	// display the wp3 menu if available
@@ -205,17 +203,13 @@ function page_navi($before = '', $after = '') {
 	}
 
 	echo $before.'<ul class="pagination clearfix">'."";
-	if ($paged > 1) {
-		$first_page_text = "&laquo";
-		echo '<li class="prev"><a href="'.get_pagenum_link().'" title="First">'.$first_page_text.'</a></li>';
-	}
 
 	echo '<li class="">';
 	previous_posts_link('&larr; Previous');
 	echo '</li>';
 	for($i = $start_page; $i  <= $end_page; $i++) {
 		if($i == $paged) {
-			echo '<li class="current"><a href="#">'.$i.'</a></li>';
+			echo '<li class="current">'.$i.'</li>';
 		} else {
 			echo '<li><a href="'.get_pagenum_link($i).'">'.$i.'</a></li>';
 		}

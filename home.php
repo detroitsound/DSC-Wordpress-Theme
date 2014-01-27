@@ -2,15 +2,15 @@
 
 			<div id="content">
 
-				<div id="main" class="clearfix" role="main">
+				<div id="main" class="eight columns clearfix" role="main">
 
 					<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 
 					<article id="post-<?php the_ID(); ?>" <?php post_class('clearfix'); ?> role="article">
-						<aside>
-                            <a href="<?php the_permalink() ?>" title="<?php the_title_attribute(); ?>"><?php the_post_thumbnail( 'wpf-featured' ); ?></a>
-                        </aside>
+
 						<header>
+
+							<a href="<?php the_permalink() ?>" title="<?php the_title_attribute(); ?>"><?php the_post_thumbnail( 'wpf-featured' ); ?></a>
 
 							<h2><a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a></h2>
 
@@ -19,7 +19,7 @@
 						</header> <!-- end article header -->
 
 						<section class="post_content clearfix">
-							<?php the_content('Read more &raquo;'); ?>
+							<?php the_excerpt('Read more &raquo;'); ?>
 
 						</section> <!-- end article section -->
 

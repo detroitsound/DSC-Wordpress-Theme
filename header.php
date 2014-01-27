@@ -41,7 +41,7 @@
 		<!-- wordpress head functions -->
 		<?php wp_head(); ?>
 		<!-- end of wordpress head -->
-
+        <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
 		<link rel="stylesheet" type="text/css" media="all" href="<?php bloginfo( 'stylesheet_url' ); ?>" />
 
 
@@ -102,7 +102,7 @@
             		<header role="banner" id="top-header">
 
             			<a class="brand" id="logo" href="<?php echo get_bloginfo('url'); ?>">
-            			    <img src="<?php bloginfo( 'stylesheet_directory' ); ?>/images/logo.svg" alt="<?php bloginfo('name'); ?>" onerror="this.onerror=null; this.src='<?php bloginfo( 'stylesheet_directory' ); ?>/images/logo.png'" />
+            			    <img src="<?php bloginfo( 'stylesheet_directory' ); ?>/images/logo.png" alt="<?php bloginfo('name'); ?>" />
             		    </a>
                         <nav class="main">
                 			<?php bones_main_nav(); // Adjust using Menus in Wordpress Admin ?>

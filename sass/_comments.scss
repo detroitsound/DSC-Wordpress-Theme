@@ -1,10 +1,138 @@
-.commentlist {
-    @include innerRow();
-}
-.comment-author {
-    @include innerRow();
+
+
+.commentlist, .comment-author, .comment {
+    @include clearfix();
 }
 
-.comment {
-    @include innerRow();
+ol.commentlist {
+    list-style: none;
+    li {
+        &.alt!, &.bypostauthor!, &.byuser!, &.comment-author-admin! {}
+        &.comment {
+            padding: 10px;
+            div {
+                &.comment-author! {}
+                &.vcard {
+                    cite.fn {
+                        font-style: normal;
+                        a.url! {}
+                    }
+                    img {
+                        &.avatar {
+                            float: right;
+                            margin: 0;
+                        }
+                        &.avatar-32!, &.photo! {}
+                    }
+                    span.says! {}
+                }
+                &.commentmetadata! {}
+                &.comment-meta {
+                    font-size: 10px;
+                    a {
+                        color: #ccc;
+                    }
+                }
+            }
+            p!, ul! {}
+            div.reply {
+                font-size: 11px;
+                a {
+                    font-weight: bold;
+                }
+            }
+            ul.children {
+                list-style: none;
+                margin: 0;
+                li {
+                    &.alt!, &.bypostauthor!, &.byuser!, &.comment!, &.comment-author-admin! {}
+                }
+            }
+        }
+
+        &.parent {
+            border-left: 1px solid $grey-1;
+        }
+    }
+
+    .avatar {
+        img { float: left !important; }
+    }
+
+    .column {
+        padding: 0px;
+    }
+
+    .depth-1 {
+        padding-left: $columnGutter/2;
+        background:   $grey-1;
+    }
+    .depth-2 {
+        padding-left: 30px;
+        background:   $grey-2;
+    }
+    .depth-3 {
+        padding-left: 45px;
+        background:   $grey-3;
+    }
+    .depth-4 {
+        padding-left: 60px;
+        background:   $grey-4;
+    }
+
+    .button {
+        padding:       4px 10px;
+        margin-bottom: 15px;
+        position: relative;
+        float: right;
+    }
+}
+
+.commentlist {
+    list-style: none;
+    padding: 0;
+    .comment-body {
+        padding: 5px 0;
+        border-top: 1px solid #CCC;
+        border-bottom: 1px solid #CCC;
+        .comment-author {
+            .fn {
+                font-style: normal;
+                font-size: 25px;
+            }
+            .says {
+                font-style: italic;
+            }
+        }
+        .comment-meta {
+            display: none;
+        }
+    }
+    .panel {
+        border-bottom: none;
+        background:    none;
+    }
+}
+
+#commentform {
+    background: lighten($grey-1, 5%);
+    padding:    $columnGutter/2;
+    @include clearfix();
+    li {
+        margin-bottom: 5px;
+        @include clearfix();
+
+        label {
+            @include column(3);
+            padding-left: 0px;
+        }
+        input {
+            @include column(9);
+            padding: 3px 5px;
+        }
+    }
+    textarea {
+        width:      100%;
+        min-height: 100px;
+    }
 }

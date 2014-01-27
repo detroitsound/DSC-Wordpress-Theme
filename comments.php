@@ -113,7 +113,7 @@ The comments page for Bones
 
 	<textarea name="comment" id="comment" placeholder="Your Comment Here..." tabindex="4"></textarea>
 
-    <input class="button medium radius blue nice" name="submit" type="submit" id="submit" tabindex="5" value="Submit Comment" />
+    <input class="button large right" name="submit" type="submit" id="submit" tabindex="5" value="Submit Comment" />
     <?php comment_id_fields(); ?>
 
 	<?php do_action('comment_form', $post->ID); ?>

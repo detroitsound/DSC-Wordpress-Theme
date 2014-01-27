@@ -9,6 +9,20 @@
 
 }
 
+// body {
+//     &.archive, &.tax-Formats, &.tax-collections {
+//         nav.main ul li {
+//             background: $red;
+//             > a {
+//                 color:  $yellow;
+//             }
+//             > .flyout-toggle span {
+//                 border-top-color: $yellow;
+//             }
+//         }
+//     }
+// }
+
 nav.main {
     width:          auto;
     display:        inline-block;
@@ -26,7 +40,7 @@ nav.main {
             position: relative;
             background: $white;
             @include subheader;
-            &:hover, &.active {
+            &:hover { // add &.active if you want navigation back in
                 background: $red;
                 > a {
                     color:  $yellow;

@@ -374,7 +374,7 @@
 }
 
 /* line 341, ../sass/admin-styles.scss */
-.form-table input {
+.form-table input[type="text"] {
   width: 100%;
 }
 /* line 344, ../sass/admin-styles.scss */

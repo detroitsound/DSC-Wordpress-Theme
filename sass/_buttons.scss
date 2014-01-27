@@ -1,0 +1,99 @@
+@mixin button-color($color, $text:$white) {
+    background-color: $color;
+    border: 1px solid $color;
+    border-bottom: 1px solid darken($color, 10%);
+    color: $text;
+    &:hover {
+        background-color: darken($color, 10%);
+    }
+}
+
+button, .button {
+    font-weight: 500;
+    @include border-radius($buttonRadius);
+    @include box-shadow(none);
+    @include transition(.2s);
+
+    //Size Changes on Buttons
+
+    &.xlarge {
+        @include border-radius(4px);
+        padding: 23px 37px 24px;
+        font-size: 20px;
+    }
+
+    &.xxlarge {
+        @include border-radius(5px);
+        padding: 27px 45px 28px;
+        font-size: 1.6em;
+    }
+
+    &.short {
+        padding-top:    3px;
+        padding-bottom: 4px;
+        &.large {
+            padding-top:    8px;
+            padding-bottom: 9px;
+        }
+        &.xlarge {
+            padding-top:    11px;
+            padding-bottom: 12px;
+        }
+        &.xxlarge {
+            padding-top:    13px;
+            padding-bottom: 14px;
+        }
+    }
+
+    &.thin {
+        padding-left:  6px;
+        padding-right: 6px;
+        &.large {
+            padding-left:  10px;
+            padding-right: 10px;
+        }
+        &.xlarge {
+            padding-left:  18px;
+            padding-right: 18px;
+        }
+        &.xxlarge {
+            padding-left:  22px;
+            padding-right: 22px;
+        }
+    }
+
+    //Style Changes on buttons
+
+    &.square {
+        @include border-radius(0);
+    }
+
+    //Colors of Various Buttons
+
+    //default
+    @include button-color($mainColor);
+    &.secondary {
+        @include button-color($secondaryColor, darken($secondaryColor, 45%));
+    }
+    &.alert {
+        @include button-color($alertColor);
+    }
+    &.success {
+        @include button-color($successColor);
+    }
+    &.light-grey {
+        @include button-color(lighten($secondaryColor, 10%),darken($secondaryColor, 40%));
+    }
+    &.dark-grey {
+        @include button-color(darken($secondaryColor, 10%), darken($secondaryColor, 50%));
+    }
+    &.disabled {
+        background-color: $secondaryColor;
+        border: 1px solid $secondaryColor;
+        color: darken($secondaryColor, 25%);
+        cursor: default;
+        &:hover {
+            background-color: $secondaryColor;
+        }
+    }
+}

@@ -1,4 +1,4 @@
-				<div id="sidebar2" class="sidebar" role="complementary">
+				<aside id="sidebar2" class="sidebar" role="complementary">
 
 						<?php if ( is_active_sidebar( 'sidebar2' ) ) : ?>
 
@@ -12,4 +12,4 @@
 
 						<?php endif; ?>
 
-				</div>
+				</aside>
