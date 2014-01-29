@@ -1,0 +1,122 @@
+@import '_settings.scss';
+@import '_dsc-settings.scss';
+@import '_fullscreen-image.scss';
+@import "compass/css3";
+
+@import "foundation/settings";
+@import "foundation/functions/all";
+@import "foundation/mixins/clearfix";
+@import "foundation/mixins/css-triangle";
+@import "foundation/mixins/respond-to";
+@import "foundation/mixins/semantic-grid";
+@import "foundation/components/_grid";
+@import "foundation/components/modules/_mqueries.scss";
+
+
+#homepageContent {
+    @include clearfix();
+    article {
+        @include box-shadow(inset 0 0 10px rgba($black, .75));
+        @include background-size(100% auto);
+        background-position:   center center;
+        background-repeat:     no-repeat;
+    }
+    .post_content {
+        @include outerRow();
+        padding-top:    100px;
+        padding-bottom: 100px;
+        display:        table;
+        @include media-query() {
+            width:   100%;
+            padding: 60px $columnGutter/2;
+        }
+        .align-content {
+            display:        table-cell;
+            vertical-align: middle;
+            text-align:     center;
+        }
+    }
+
+    h1, p {
+        color: $white;
+        text-shadow: 0 0 7px $black;
+    }
+
+    h1 {
+        font-size: 4em;
+        @include media-query() {
+            font-size: 3em;
+        }
+    }
+
+    #sidebar {
+        @include outerRow();
+        margin-top:    $columnGutter;
+        margin-bottom: $columnGutter;
+        .widget {
+            @include column(4);
+        }
+
+        .widget_recent_entries {
+            li {
+                margin-bottom: 12px;
+                line-height:   1.1em;
+            }
+            a {
+                display: block;
+            }
+            .post-date {
+                display: block;
+            }
+        }
+    }
+}
+
+
+#mc_signup {
+
+    .mc_merge_var, .mc_signup_submit, label {
+        display: block;
+        margin-bottom: 5px
+    }
+
+    .mc_signup_submit {
+        text-align: right;
+    }
+
+    .mergeRow {
+        display: none;
+    }
+
+    #mc_message {
+        margin-bottom: 15px;
+    }
+
+    .mc_input {
+        height: 26px;
+        font-size: 1.2em;
+        width: 100%;
+    }
+
+    .mc_success_msg, .mc_error_msg {
+        color: white;
+        margin: 0 15px;
+        padding: 5px;
+        @include border-radius(3px);
+
+        a {
+            color: white;
+            text-decoration: underline;
+
+        }
+    }
+
+    .mc_success_msg {
+        background: green;
+    }
+
+    .mc_error_msg {
+        background: red;
+    }
+
+}

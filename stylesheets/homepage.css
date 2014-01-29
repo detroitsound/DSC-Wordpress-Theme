@@ -1,4 +1,3 @@
-/* Artfully masterminded by ZURB  */
 /*
 @if  $textDirection == ltr {
   $defaultFloat: left;
@@ -15,159 +14,43 @@
     }
 
 */
+/*
+Sets the background image to fill the enclosing div.
+
+Format:
+
+$file: Image Name and path relative to /images
+$extention: Image expention with "."
+$retina: True/fale if the image has retina optimized verison in the format "image_name@2x"
+$ie: If the mixin is being used in a ie8 selector div (lt-ie9)
+$attachment: When attachment is set to "fixed", it will remain fixed relative to the browser window. "scroll" will move as normal.
+$position: The placement of the background in relation to its div
+
+*/
 /* line 51, ../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/zurb-foundation-3.2.5/scss/foundation/mixins/_semantic-grid.scss */
-#main, aside.sidebar, .search-form .input, .search-form .submit, #commentform li label, #commentform li input {
+#homepageContent #sidebar .widget {
   float: left;
 }
 
 /* line 55, ../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/zurb-foundation-3.2.5/scss/foundation/mixins/_semantic-grid.scss */
-#top-header, #bottom-footer, nav.main > ul, #content, .search-form {
+#homepageContent .post_content, #homepageContent #sidebar {
   *zoom: 1;
 }
 /* line 4, ../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/zurb-foundation-3.2.5/scss/foundation/mixins/_clearfix.scss */
-#top-header:before, #bottom-footer:before, nav.main > ul:before, #content:before, .search-form:before, #top-header:after, #bottom-footer:after, nav.main > ul:after, #content:after, .search-form:after {
+#homepageContent .post_content:before, #homepageContent #sidebar:before, #homepageContent .post_content:after, #homepageContent #sidebar:after {
   content: " ";
   display: table;
 }
 /* line 5, ../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/zurb-foundation-3.2.5/scss/foundation/mixins/_clearfix.scss */
-#top-header:after, #bottom-footer:after, nav.main > ul:after, #content:after, .search-form:after {
+#homepageContent .post_content:after, #homepageContent #sidebar:after {
   clear: both;
 }
 
-/* line 59, ../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/zurb-foundation-3.2.5/scss/foundation/mixins/_semantic-grid.scss */
-nav.main > ul, .search-form {
-  width: auto;
-  max-width: none;
-  min-width: 0;
-}
-
 /* line 62, ../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/zurb-foundation-3.2.5/scss/foundation/mixins/_semantic-grid.scss */
-#main, aside.sidebar, .search-form .input, .search-form .submit, #commentform li label, #commentform li input {
+#homepageContent #sidebar .widget {
   position: relative;
   min-height: 1px;
   padding: 0 15px;
-}
-
-/* Requires: normalize.css */
-/* Global Reset & Standards ---------------------- */
-/* line 5, ../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/zurb-foundation-3.2.5/scss/foundation/common/_globals.scss */
-*, *:before, *:after {
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
-}
-
-/* line 6, ../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/zurb-foundation-3.2.5/scss/foundation/common/_globals.scss */
-html {
-  font-size: 62.5%;
-}
-
-/* line 7, ../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/zurb-foundation-3.2.5/scss/foundation/common/_globals.scss */
-body {
-  background: white;
-  font-family: "Open Sans", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
-  font-weight: normal;
-  font-style: normal;
-  font-size: 14px;
-  line-height: 1;
-  color: #222222;
-  position: relative;
-  -webkit-font-smoothing: antialiased;
-}
-
-/* Links ---------------------- */
-/* line 11, ../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/zurb-foundation-3.2.5/scss/foundation/common/_globals.scss */
-a img {
-  border: none;
-}
-
-/* line 12, ../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/zurb-foundation-3.2.5/scss/foundation/common/_globals.scss */
-a {
-  color: #dc3f1c;
-  text-decoration: none;
-  line-height: inherit;
-}
-
-/* line 13, ../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/zurb-foundation-3.2.5/scss/foundation/common/_globals.scss */
-a:hover {
-  color: #c53919;
-}
-
-/* line 14, ../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/zurb-foundation-3.2.5/scss/foundation/common/_globals.scss */
-a:focus {
-  color: #c53919;
-}
-
-/* line 15, ../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/zurb-foundation-3.2.5/scss/foundation/common/_globals.scss */
-p a, p a:visited {
-  line-height: inherit;
-}
-
-/* Misc ---------------------- */
-/* line 19, ../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/zurb-foundation-3.2.5/scss/foundation/common/_globals.scss */
-.left {
-  float: left;
-}
-
-/* line 20, ../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/zurb-foundation-3.2.5/scss/foundation/common/_globals.scss */
-.right {
-  float: right;
-}
-
-/* line 21, ../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/zurb-foundation-3.2.5/scss/foundation/common/_globals.scss */
-.text-left {
-  text-align: left;
-}
-
-/* line 22, ../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/zurb-foundation-3.2.5/scss/foundation/common/_globals.scss */
-.text-right {
-  text-align: right;
-}
-
-/* line 23, ../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/zurb-foundation-3.2.5/scss/foundation/common/_globals.scss */
-.text-center {
-  text-align: center;
-}
-
-/* line 24, ../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/zurb-foundation-3.2.5/scss/foundation/common/_globals.scss */
-.hide {
-  display: none;
-}
-
-/* line 25, ../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/zurb-foundation-3.2.5/scss/foundation/common/_globals.scss */
-.hide-override {
-  display: none !important;
-}
-
-/* line 26, ../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/zurb-foundation-3.2.5/scss/foundation/common/_globals.scss */
-.highlight {
-  background: #ffff99;
-}
-
-/* line 28, ../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/zurb-foundation-3.2.5/scss/foundation/common/_globals.scss */
-#googlemap img, object, embed {
-  max-width: none;
-}
-
-/* line 30, ../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/zurb-foundation-3.2.5/scss/foundation/common/_globals.scss */
-#map_canvas embed {
-  max-width: none;
-}
-
-/* line 31, ../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/zurb-foundation-3.2.5/scss/foundation/common/_globals.scss */
-#map_canvas img {
-  max-width: none;
-}
-
-/* line 32, ../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/zurb-foundation-3.2.5/scss/foundation/common/_globals.scss */
-#map_canvas object {
-  max-width: none;
-}
-
-/* Reset for strange margins by default on <figure> elements */
-/* line 35, ../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/zurb-foundation-3.2.5/scss/foundation/common/_globals.scss */
-figure {
-  margin: 0;
 }
 
 /* The Grid ---------------------- */
@@ -835,7 +718,7 @@ table.hide-for-medium {
   /*            */
   /* line 139, ../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/zurb-foundation-3.2.5/scss/foundation/components/modules/_mqueries.scss */
   .touch .nav-bar li a {
-    font-size: 13px;
+    font-size: ms(0)-1;
   }
   /* line 141, ../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/zurb-foundation-3.2.5/scss/foundation/components/modules/_mqueries.scss */
   .touch .nav-bar li.has-flyout > a.flyout-toggle {
@@ -1523,7 +1406,7 @@ table.hide-for-medium {
   /* line 303, ../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/zurb-foundation-3.2.5/scss/foundation/components/modules/_mqueries.scss */
   .clearing-close {
     z-index: 99;
-    font-size: 37px;
+    font-size: ms(4);
     top: 0px;
     right: 5px;
   }
@@ -1586,7 +1469,7 @@ table.hide-for-medium {
   }
   /* line 320, ../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/zurb-foundation-3.2.5/scss/foundation/components/modules/_mqueries.scss */
   .tabs.mobile dd a, .tabs.mobile li a {
-    font-size: 15px;
+    font-size: ms(0)1;
     display: block;
     width: auto;
     height: auto;
@@ -1836,7 +1719,7 @@ table.hide-for-medium {
   .top-bar ul > li.has-dropdown.moved > .dropdown li label {
     margin-bottom: 6px;
     padding-top: 6px !important;
-    font-size: 11px;
+    font-size: ms(0)-3;
   }
   /* line 404, ../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/zurb-foundation-3.2.5/scss/foundation/components/modules/_mqueries.scss */
   .top-bar ul > li.has-dropdown.moved > .dropdown li:not(.title) {
@@ -1845,7 +1728,7 @@ table.hide-for-medium {
   /* line 405, ../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/zurb-foundation-3.2.5/scss/foundation/components/modules/_mqueries.scss */
   .top-bar ul > li.has-dropdown.moved > .dropdown li:not(.title) a {
     padding: 8px 22.5px;
-    font-size: 14px;
+    font-size: ms(0);
   }
   /* line 407, ../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/zurb-foundation-3.2.5/scss/foundation/components/modules/_mqueries.scss */
   .top-bar ul > li.has-dropdown.moved > .dropdown li a, .top-bar ul > li.has-dropdown.moved > .dropdown li label {
@@ -1892,7 +1775,7 @@ table.hide-for-medium {
     background: transparent;
     padding-top: 8px;
     padding-bottom: 8px;
-    font-size: 23px;
+    font-size: ms(2);
     font-weight: bold;
   }
   /* line 422, ../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/zurb-foundation-3.2.5/scss/foundation/components/modules/_mqueries.scss */
@@ -1995,1344 +1878,165 @@ table.hide-for-medium {
     margin: 0;
   }
 }
-/* line 11, ../sass/_buttons.scss */
-button, .button {
-  font-weight: 500;
-  -webkit-border-radius: 3px;
-  -moz-border-radius: 3px;
-  -ms-border-radius: 3px;
-  -o-border-radius: 3px;
-  border-radius: 3px;
-  -webkit-box-shadow: none;
-  -moz-box-shadow: none;
-  box-shadow: none;
-  -webkit-transition: 0.2s;
-  -moz-transition: 0.2s;
-  -o-transition: 0.2s;
-  transition: 0.2s;
-  background-color: #dc3f1c;
-  border: 1px solid #dc3f1c;
-  border-bottom: 1px solid #af3216;
-  color: white;
+/* line 16, ../sass/homepage.scss */
+#homepageContent {
+  *zoom: 1;
 }
-/* line 19, ../sass/_buttons.scss */
-button.xlarge, .button.xlarge {
-  -webkit-border-radius: 4px;
-  -moz-border-radius: 4px;
-  -ms-border-radius: 4px;
-  -o-border-radius: 4px;
-  border-radius: 4px;
-  padding: 23px 37px 24px;
-  font-size: 20px;
+/* line 4, ../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/zurb-foundation-3.2.5/scss/foundation/mixins/_clearfix.scss */
+#homepageContent:before, #homepageContent:after {
+  content: " ";
+  display: table;
 }
-/* line 25, ../sass/_buttons.scss */
-button.xxlarge, .button.xxlarge {
-  -webkit-border-radius: 5px;
-  -moz-border-radius: 5px;
-  -ms-border-radius: 5px;
-  -o-border-radius: 5px;
-  border-radius: 5px;
-  padding: 27px 45px 28px;
-  font-size: 1.6em;
-}
-/* line 31, ../sass/_buttons.scss */
-button.short, .button.short {
-  padding-top: 3px;
-  padding-bottom: 4px;
-}
-/* line 34, ../sass/_buttons.scss */
-button.short.large, .button.short.large {
-  padding-top: 8px;
-  padding-bottom: 9px;
-}
-/* line 38, ../sass/_buttons.scss */
-button.short.xlarge, .button.short.xlarge {
-  padding-top: 11px;
-  padding-bottom: 12px;
-}
-/* line 42, ../sass/_buttons.scss */
-button.short.xxlarge, .button.short.xxlarge {
-  padding-top: 13px;
-  padding-bottom: 14px;
-}
-/* line 48, ../sass/_buttons.scss */
-button.thin, .button.thin {
-  padding-left: 6px;
-  padding-right: 6px;
-}
-/* line 51, ../sass/_buttons.scss */
-button.thin.large, .button.thin.large {
-  padding-left: 10px;
-  padding-right: 10px;
-}
-/* line 55, ../sass/_buttons.scss */
-button.thin.xlarge, .button.thin.xlarge {
-  padding-left: 18px;
-  padding-right: 18px;
-}
-/* line 59, ../sass/_buttons.scss */
-button.thin.xxlarge, .button.thin.xxlarge {
-  padding-left: 22px;
-  padding-right: 22px;
-}
-/* line 67, ../sass/_buttons.scss */
-button.square, .button.square {
-  -webkit-border-radius: 0;
-  -moz-border-radius: 0;
-  -ms-border-radius: 0;
-  -o-border-radius: 0;
-  border-radius: 0;
-}
-/* line 6, ../sass/_buttons.scss */
-button:hover, .button:hover {
-  background-color: #af3216;
-}
-/* line 75, ../sass/_buttons.scss */
-button.secondary, .button.secondary {
-  background-color: #ebe18c;
-  border: 1px solid #ebe18c;
-  border-bottom: 1px solid #e3d661;
-  color: #7c7116;
-}
-/* line 6, ../sass/_buttons.scss */
-button.secondary:hover, .button.secondary:hover {
-  background-color: #e3d661;
-}
-/* line 78, ../sass/_buttons.scss */
-button.alert, .button.alert {
-  background-color: #dc3f1c;
-  border: 1px solid #dc3f1c;
-  border-bottom: 1px solid #af3216;
-  color: white;
-}
-/* line 6, ../sass/_buttons.scss */
-button.alert:hover, .button.alert:hover {
-  background-color: #af3216;
-}
-/* line 81, ../sass/_buttons.scss */
-button.success, .button.success {
-  background-color: #00c203;
-  border: 1px solid #00c203;
-  border-bottom: 1px solid #008f02;
-  color: white;
-}
-/* line 6, ../sass/_buttons.scss */
-button.success:hover, .button.success:hover {
-  background-color: #008f02;
-}
-/* line 84, ../sass/_buttons.scss */
-button.light-grey, .button.light-grey {
-  background-color: #f3ecb7;
-  border: 1px solid #f3ecb7;
-  border-bottom: 1px solid #ebe18c;
-  color: #928519;
-}
-/* line 6, ../sass/_buttons.scss */
-button.light-grey:hover, .button.light-grey:hover {
-  background-color: #ebe18c;
-}
-/* line 87, ../sass/_buttons.scss */
-button.dark-grey, .button.dark-grey {
-  background-color: #e3d661;
-  border: 1px solid #e3d661;
-  border-bottom: 1px solid #dcca35;
-  color: #665d12;
-}
-/* line 6, ../sass/_buttons.scss */
-button.dark-grey:hover, .button.dark-grey:hover {
-  background-color: #dcca35;
-}
-/* line 90, ../sass/_buttons.scss */
-button.disabled, .button.disabled {
-  background-color: #ebe18c;
-  border: 1px solid #ebe18c;
-  color: #d3c125;
-  cursor: default;
-}
-/* line 95, ../sass/_buttons.scss */
-button.disabled:hover, .button.disabled:hover {
-  background-color: #ebe18c;
-}
-
-/* Generated by Font Squirrel (http://www.fontsquirrel.com) on September 23, 2013 */
-@font-face {
-  font-family: 'Montserrat';
-  src: url("../fonts/montserrat-regular-webfont.eot");
-  src: url("../fonts/montserrat-regular-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/montserrat-regular-webfont.woff") format("woff"), url("../fonts/montserrat-regular-webfont.ttf") format("truetype"), url("../fonts/montserrat-regular-webfont.svg#montserratregular") format("svg");
-  font-weight: normal;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: 'Ostrich Sans';
-  src: url("../fonts/ostrich-black-webfont.eot");
-  src: url("../fonts/ostrich-black-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/ostrich-black-webfont.woff") format("woff"), url("../fonts/ostrich-black-webfont.ttf") format("truetype"), url("../fonts/ostrich-black-webfont.svg#ostrich_sansblack") format("svg");
-  font-weight: normal;
-  font-style: normal;
-}
-
-/* line 38, ../sass/_typography.scss */
-body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, form, p, blockquote, th, td {
-  margin: 0;
-  padding: 0;
-  font-size: 14px;
-  direction: ltr;
-}
-
-/* line 45, ../sass/_typography.scss */
-p {
-  font-family: inherit;
-  font-weight: normal;
-  font-size: 14px;
-  line-height: 1.6;
-  margin-bottom: 17px;
-}
-/* line 46, ../sass/_typography.scss */
-p.lead {
-  font-size: 17.5px;
-  line-height: 1.6;
-  margin-bottom: 17px;
-}
-
-/* line 48, ../sass/_typography.scss */
-aside p {
-  font-size: 13px;
-  line-height: 1.35;
-  font-style: italic;
-}
-
-/* line 50, ../sass/_typography.scss */
-h1, h2, h3, h4, h5, h6 {
-  font-family: "Ostrich Sans", sans-serif;
-  font-weight: 400;
-  font-style: normal;
-  color: #222222;
-  text-rendering: optimizeLegibility;
-  line-height: 1.1;
-  margin-bottom: 14px;
-  margin-top: 14px;
-}
-/* line 59, ../sass/_typography.scss */
-h1 small, h2 small, h3 small, h4 small, h5 small, h6 small {
-  font-size: 60%;
-  color: #6f6f6f;
-  line-height: 0;
-}
-
-/* line 62, ../sass/_typography.scss */
-h1 {
-  font-size: 44px;
-}
-
-/* line 63, ../sass/_typography.scss */
-h2 {
-  font-size: 37px;
-}
-
-/* line 64, ../sass/_typography.scss */
-h3 {
-  font-size: 27px;
-}
-
-/* line 65, ../sass/_typography.scss */
-h4 {
-  font-size: 23px;
-}
-
-/* line 66, ../sass/_typography.scss */
-h5 {
-  font-size: 17px;
-}
-
-/* line 67, ../sass/_typography.scss */
-h6 {
-  font-size: 14px;
-}
-
-/* line 69, ../sass/_typography.scss */
-hr {
-  border: solid #ddd;
-  border-width: 1px 0 0;
+/* line 5, ../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/zurb-foundation-3.2.5/scss/foundation/mixins/_clearfix.scss */
+#homepageContent:after {
   clear: both;
-  margin: 22px 0 21px;
-  height: 0;
 }
-
-/* line 71, ../sass/_typography.scss */
-.subheader {
-  font-family: "Montserrat", sans-serif;
-  letter-spacing: 2px;
-  text-transform: uppercase;
+/* line 18, ../sass/homepage.scss */
+#homepageContent article {
+  -webkit-box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.75);
+  box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.75);
+  -webkit-background-size: 100% auto;
+  -moz-background-size: 100% auto;
+  -o-background-size: 100% auto;
+  background-size: 100% auto;
+  background-position: center center;
+  background-repeat: no-repeat;
 }
-
-/* line 73, ../sass/_typography.scss */
-em, i {
-  font-style: italic;
-  line-height: inherit;
-}
-
-/* line 74, ../sass/_typography.scss */
-strong, b {
-  font-weight: bold;
-  line-height: inherit;
-}
-
-/* line 75, ../sass/_typography.scss */
-small {
-  font-size: 60%;
-  line-height: inherit;
-}
-
-/* line 76, ../sass/_typography.scss */
-code {
-  font-weight: bold;
-  background: #ffff99;
-}
-
-/*
- * Print styles.
- *
- * Inlined to avoid required HTTP connection: www.phpied.com/delay-loading-your-print-css/
- * Credit to Paul Irish and HTML5 Boilerplate (html5boilerplate.com)
-*/
-/* line 84, ../sass/_typography.scss */
-.print-only {
-  display: none !important;
-}
-
-@media print {
-  /* line 86, ../sass/_typography.scss */
-  * {
-    background: transparent !important;
-    color: black !important;
-    box-shadow: none !important;
-    text-shadow: none !important;
-    filter: none !important;
-    -ms-filter: none !important;
-  }
-
-  /* Black prints faster: h5bp.com/s */
-  /* line 87, ../sass/_typography.scss */
-  a, a:visited {
-    text-decoration: underline;
-  }
-
-  /* line 88, ../sass/_typography.scss */
-  a[href]:after {
-    content: " (" attr(href) ")";
-  }
-
-  /* line 89, ../sass/_typography.scss */
-  abbr[title]:after {
-    content: " (" attr(title) ")";
-  }
-
-  /* line 90, ../sass/_typography.scss */
-  .ir a:after, a[href^="javascript:"]:after, a[href^="#"]:after {
-    content: "";
-  }
-
-  /* Don't show links for images, or javascript/internal links */
-  /* line 91, ../sass/_typography.scss */
-  pre, blockquote {
-    border: 1px solid #999;
-    page-break-inside: avoid;
-  }
-
-  /* line 92, ../sass/_typography.scss */
-  thead {
-    display: table-header-group;
-  }
-
-  /* h5bp.com/t */
-  /* line 93, ../sass/_typography.scss */
-  tr, img {
-    page-break-inside: avoid;
-  }
-
-  /* line 94, ../sass/_typography.scss */
-  img {
-    max-width: 100% !important;
-  }
-
-  @page {
-    margin: 0.5cm;
-}
-
-  /* line 96, ../sass/_typography.scss */
-  p, h2, h3 {
-    orphans: 3;
-    widows: 3;
-  }
-
-  /* line 97, ../sass/_typography.scss */
-  h2, h3 {
-    page-break-after: avoid;
-  }
-
-  /* line 98, ../sass/_typography.scss */
-  .hide-on-print {
-    display: none !important;
-  }
-
-  /* line 99, ../sass/_typography.scss */
-  .print-only {
-    display: block !important;
-  }
-
-  /* line 100, ../sass/_typography.scss */
-  .hide-for-print {
-    display: none !important;
-  }
-
-  /* line 101, ../sass/_typography.scss */
-  .show-for-print {
-    display: inherit !important;
-  }
-}
-/* line 1, ../sass/_navigation.scss */
-#top-header, #bottom-footer {
+/* line 24, ../sass/homepage.scss */
+#homepageContent .post_content {
   width: 1000px;
   max-width: 100%;
   min-width: 768px;
   margin: 0 auto;
-  margin-top: 10px;
+  padding-top: 100px;
+  padding-bottom: 100px;
+  display: table;
 }
 @media only screen and (max-width: 767px) {
-  /* line 1, ../sass/_navigation.scss */
-  #top-header, #bottom-footer {
+  /* line 24, ../sass/homepage.scss */
+  #homepageContent .post_content {
     width: auto;
     min-width: 0;
     margin-left: 0;
     margin-right: 0;
   }
 }
-/* line 5, ../sass/_navigation.scss */
-#top-header #logo, #bottom-footer #logo {
-  float: left;
-  padding: 0 15px;
-}
-
-/* line 26, ../sass/_navigation.scss */
-nav.main {
-  width: auto;
-  display: inline-block;
-  line-height: 38px;
-  border-top: 1px solid #dc3f1c;
-  border-bottom: 1px solid #dc3f1c;
-  padding: 0 15px;
-  margin: 30px 15px 0;
-}
-/* line 34, ../sass/_navigation.scss */
-nav.main ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-/* line 38, ../sass/_navigation.scss */
-nav.main ul li {
-  float: left;
-  position: relative;
-  background: white;
-  font-family: "Montserrat", sans-serif;
-  letter-spacing: 2px;
-  text-transform: uppercase;
-}
-/* line 43, ../sass/_navigation.scss */
-nav.main ul li:hover {
-  background: #dc3f1c;
-}
-/* line 45, ../sass/_navigation.scss */
-nav.main ul li:hover > a {
-  color: #ebe18c;
-}
-/* line 49, ../sass/_navigation.scss */
-nav.main ul li:hover > .flyout-toggle span {
-  border-top-color: #ebe18c;
-}
-/* line 53, ../sass/_navigation.scss */
-nav.main ul li > a {
-  line-height: 1.3em;
-  display: block;
-  color: #dc3f1c;
-  z-index: 10;
-  padding: 10px 15px;
-  -webkit-transition: 0.2s;
-  -moz-transition: 0.2s;
-  -o-transition: 0.2s;
-  transition: 0.2s;
-}
-@media only screen and (min-width: 0px) and (max-width: 867px), only screen and (min-device-width: 0px) and (max-device-width: 867px) {
-  /* line 53, ../sass/_navigation.scss */
-  nav.main ul li > a {
-    font-size: .7em;
-    margin-top: 2px;
-  }
-}
-/* line 67, ../sass/_navigation.scss */
-nav.main > ul {
-  margin: 0 -15px;
-  background: white;
-  text-align: center;
-}
-/* line 71, ../sass/_navigation.scss */
-nav.main > ul > li {
-  border: none;
-  display: inline-block;
-  float: none;
-  position: relative;
-  -webkit-transition: 0.2s;
-  -moz-transition: 0.2s;
-  -o-transition: 0.2s;
-  transition: 0.2s;
-}
-/* line 77, ../sass/_navigation.scss */
-nav.main > ul > li > a {
-  padding-top: 0px;
-  padding-bottom: 0px;
-  min-height: 40px;
-  line-height: 40px;
-}
-/* line 86, ../sass/_navigation.scss */
-nav.main .flyout {
-  width: auto;
-  position: absolute;
-  display: none;
-  left: 0;
-  z-index: 11;
-  border: 1px solid #dc3f1c;
-}
-/* line 93, ../sass/_navigation.scss */
-nav.main .flyout > li {
-  width: 100%;
-}
-/* line 99, ../sass/_navigation.scss */
-nav.main .has-flyout > a {
-  position: relative;
-  padding-right: 26px;
-}
-/* line 104, ../sass/_navigation.scss */
-nav.main .has-flyout:hover .flyout {
-  display: block;
-}
-/* line 110, ../sass/_navigation.scss */
-nav.main a.flyout-toggle {
-  position: absolute;
-  right: 8px;
-  top: 50%;
-  margin-top: -3px;
-  line-height: 1em;
-  min-height: 0;
-  padding: 0;
-}
-/* line 118, ../sass/_navigation.scss */
-nav.main a.flyout-toggle span {
-  content: "";
-  display: block;
-  width: 0;
-  height: 0;
-  border: solid 5px;
-  border-color: #dc3f1c transparent transparent transparent;
-}
-
-/* line 124, ../sass/_navigation.scss */
-#top-header {
-  margin-bottom: 10px;
-}
 @media only screen and (min-width: 0px) and (max-width: 767px), only screen and (min-device-width: 0px) and (max-device-width: 767px) {
-  /* line 124, ../sass/_navigation.scss */
-  #top-header {
-    padding-bottom: 5px;
-    margin-bottom: 0px;
-    border-bottom: 1px solid #dc3f1c;
+  /* line 24, ../sass/homepage.scss */
+  #homepageContent .post_content {
+    width: 100%;
+    padding: 60px 15px;
   }
 }
-/* line 131, ../sass/_navigation.scss */
-#top-header #logo {
-  width: 110px;
-}
-@media only screen and (min-width: 0px) and (max-width: 767px), only screen and (min-device-width: 0px) and (max-device-width: 767px) {
-  /* line 131, ../sass/_navigation.scss */
-  #top-header #logo {
-    width: 80px;
-  }
-}
-@media only screen and (min-width: 0px) and (max-width: 767px), only screen and (min-device-width: 0px) and (max-device-width: 767px) {
-  /* line 138, ../sass/_navigation.scss */
-  #top-header nav {
-    display: none;
-  }
-}
-/* line 144, ../sass/_navigation.scss */
-#top-header .menu-action {
-  float: right;
-  margin: 0 15px;
-}
-/* line 147, ../sass/_navigation.scss */
-#top-header .menu-action a {
-  color: #dc3f1c;
-  font-size: 3em;
-}
-
-/* line 154, ../sass/_navigation.scss */
-#bottom-footer {
-  margin-bottom: 20px;
-  text-align: center;
-}
-/* line 157, ../sass/_navigation.scss */
-#bottom-footer #logo {
-  width: 90px;
-}
-@media only screen and (min-width: 0px) and (max-width: 767px), only screen and (min-device-width: 0px) and (max-device-width: 767px) {
-  /* line 157, ../sass/_navigation.scss */
-  #bottom-footer #logo {
-    float: none;
-    margin: 0 auto;
-    display: block;
-  }
-}
-/* line 166, ../sass/_navigation.scss */
-#bottom-footer nav.main {
-  margin-top: 17px;
-  padding: 0px;
-}
-
-/* line 173, ../sass/_navigation.scss */
-.mobile-nav-container {
-  width: 100%;
-  height: 100%;
-  margin-top: 5px;
-  position: relative;
-  display: table;
-  -webkit-transition: 0.2s;
-  -moz-transition: 0.2s;
-  -o-transition: 0.2s;
-  transition: 0.2s;
-}
-/* line 180, ../sass/_navigation.scss */
-.mobile-nav-container ul.tabs {
+/* line 33, ../sass/homepage.scss */
+#homepageContent .post_content .align-content {
   display: table-cell;
   vertical-align: middle;
-  margin-top: 0px;
-  margin-bottom: 0px;
-  border-bottom: none;
-  list-style: none;
-  padding: 0px;
+  text-align: center;
 }
-/* line 188, ../sass/_navigation.scss */
-.mobile-nav-container ul.tabs li {
-  border-left: none;
-  margin-bottom: 0px;
-  padding: 10px;
-  font-family: "Montserrat", sans-serif;
-  letter-spacing: 2px;
-  text-transform: uppercase;
+/* line 40, ../sass/homepage.scss */
+#homepageContent h1, #homepageContent p {
+  color: white;
+  text-shadow: 0 0 7px black;
 }
-/* line 193, ../sass/_navigation.scss */
-.mobile-nav-container ul.tabs li a {
-  color: #dc3f1c;
-  background: none;
-  border: none;
-  -webkit-box-shadow: none;
-  -moz-box-shadow: none;
-  box-shadow: none;
+/* line 45, ../sass/homepage.scss */
+#homepageContent h1 {
+  font-size: 4em;
 }
-
-/* line 205, ../sass/_navigation.scss */
-.csstransforms3d #bodyWrapper.animate {
-  position: fixed;
-  background: #e6e6e6;
-  -webkit-perspective: 1500px;
-  -moz-perspective: 1500px;
-  -ms-perspective: 1500px;
-  -o-perspective: 1500px;
-  perspective: 1500px;
+@media only screen and (min-width: 0px) and (max-width: 767px), only screen and (min-device-width: 0px) and (max-device-width: 767px) {
+  /* line 45, ../sass/homepage.scss */
+  #homepageContent h1 {
+    font-size: 3em;
+  }
 }
-/* line 210, ../sass/_navigation.scss */
-.csstransforms3d #bodyWrapper.animate #container {
-  -webkit-transform: translateZ(-1500px) translateX(100%) rotateY(-45deg);
-  -moz-transform: translateZ(-1500px) translateX(100%) rotateY(-45deg);
-  -ms-transform: translateZ(-1500px) translateX(100%) rotateY(-45deg);
-  -o-transform: translateZ(-1500px) translateX(100%) rotateY(-45deg);
-  transform: translateZ(-1500px) translateX(100%) rotateY(-45deg);
-  position: absolute;
-  overflow: hidden;
-  width: 100%;
-  height: 100%;
-  cursor: pointer;
-  -webkit-backface-visibility: hidden;
-  -moz-backface-visibility: hidden;
-  -ms-backface-visibility: hidden;
-  -o-backface-visibility: hidden;
-  backface-visibility: hidden;
-}
-/* line 219, ../sass/_navigation.scss */
-.csstransforms3d #bodyWrapper.animate #container:after {
-  opacity: 1;
-  height: 101%;
-  -webkit-transition: opacity 0.3s;
-  -moz-transition: opacity 0.3s;
-  -o-transition: opacity 0.3s;
-  transition: opacity 0.3s;
-}
-/* line 226, ../sass/_navigation.scss */
-.csstransforms3d #bodyWrapper.animate #mobileMenu {
-  display: block;
-  left: 0;
-}
-
-/* line 235, ../sass/_navigation.scss */
-.no-csstransforms3d #bodyWrapper.animate #container {
-  left: 75%;
-}
-
-/* line 240, ../sass/_navigation.scss */
-#bodyWrapper {
-  width: 100%;
-  height: 100%;
-  position: relative;
-}
-
-/* line 246, ../sass/_navigation.scss */
-#container {
-  background: #fff;
-  min-height: 100%;
-  position: relative;
-  outline: 1px solid rgba(0, 0, 0, 0);
-  z-index: 10;
-  -webkit-transition: 0.5s;
-  -moz-transition: 0.5s;
-  -o-transition: 0.5s;
-  transition: 0.5s;
-  -webkit-transform-origin: 50% 50% 50%;
-  -moz-transform-origin: 50% 50% 50%;
-  -ms-transform-origin: 50% 50% 50%;
-  -o-transform-origin: 50% 50% 50%;
-  transform-origin: 50% 50% 50%;
-}
-/* line 255, ../sass/_navigation.scss */
-#container:after {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 0px;
-  opacity: 0;
-  background: rgba(0, 0, 0, 0.2);
-  -webkit-transition: opacity 0.4s, height 0s;
-  -webkit-transition-delay: 0s, 0.4s;
-  -moz-transition: opacity 0.4s, height 0s 0.4s;
-  -o-transition: opacity 0.4s, height 0s 0.4s;
-  transition: opacity 0.4s, height 0s 0.4s;
-}
-
-/* line 268, ../sass/_navigation.scss */
-.modalview {
-  -webkit-perspective: 1500px;
-  -moz-perspective: 1500px;
-  -ms-perspective: 1500px;
-  -o-perspective: 1500px;
-  perspective: 1500px;
-}
-/* line 270, ../sass/_navigation.scss */
-.modalview .container {
-  position: absolute;
-  overflow: hidden;
-  width: 100%;
-  height: 100%;
-  cursor: pointer;
-  -webkit-backface-visibility: hidden;
-  backface-visibility: hidden;
-}
-/* line 279, ../sass/_navigation.scss */
-.modalview #contentWrapper {
-  -webkit-transform: translateZ(-1px);
-  /* solves a rendering bug in Chrome on Windows */
-}
-
-/* line 285, ../sass/_navigation.scss */
-#mobileMenu {
-  display: none;
-  position: relative;
-  float: left;
-  height: 100%;
-  width: 75%;
-  font-size: 2em;
-  -webkit-transition: 1s;
-  -moz-transition: 1s;
-  -o-transition: 1s;
-  transition: 1s;
-}
-
-/* line 295, ../sass/_navigation.scss */
-#wpadminbar {
-  position: fixed;
-}
-
-/* line 1, ../sass/_grid.scss */
-html, body {
-  margin: 0;
-  width: 100%;
-  height: 100%;
-}
-
-/* line 7, ../sass/_grid.scss */
-.sidebar .panel {
-  padding: 15px;
-}
-
-/* line 11, ../sass/_grid.scss */
-#content {
+/* line 52, ../sass/homepage.scss */
+#homepageContent #sidebar {
   width: 1000px;
   max-width: 100%;
   min-width: 768px;
   margin: 0 auto;
+  margin-top: 30px;
+  margin-bottom: 30px;
 }
 @media only screen and (max-width: 767px) {
-  /* line 11, ../sass/_grid.scss */
-  #content {
+  /* line 52, ../sass/homepage.scss */
+  #homepageContent #sidebar {
     width: auto;
     min-width: 0;
     margin-left: 0;
     margin-right: 0;
   }
 }
-
-/* line 15, ../sass/_grid.scss */
-#main {
-  width: 75%;
+/* line 56, ../sass/homepage.scss */
+#homepageContent #sidebar .widget {
+  width: 33.33333%;
 }
 @media only screen and (max-width: 767px) {
-  /* line 15, ../sass/_grid.scss */
-  #main {
+  /* line 56, ../sass/homepage.scss */
+  #homepageContent #sidebar .widget {
     float: none;
     width: auto;
   }
 }
-
-/* line 19, ../sass/_grid.scss */
-aside.sidebar {
-  width: 25%;
+/* line 61, ../sass/homepage.scss */
+#homepageContent #sidebar .widget_recent_entries li {
+  margin-bottom: 12px;
+  line-height: 1.1em;
 }
-@media only screen and (max-width: 767px) {
-  /* line 19, ../sass/_grid.scss */
-  aside.sidebar {
-    float: none;
-    width: auto;
-  }
+/* line 65, ../sass/homepage.scss */
+#homepageContent #sidebar .widget_recent_entries a {
+  display: block;
 }
-
-/* line 1, ../sass/_elements.scss */
-.panel {
-  background: #e6e6e6;
-  border-bottom: 1px solid #cccccc;
-  -webkit-border-radius: 3px;
-  -moz-border-radius: 3px;
-  -ms-border-radius: 3px;
-  -o-border-radius: 3px;
-  border-radius: 3px;
+/* line 68, ../sass/homepage.scss */
+#homepageContent #sidebar .widget_recent_entries .post-date {
+  display: block;
 }
 
-/* line 7, ../sass/_elements.scss */
-ul, ol, dl {
-  list-style-position: inside;
-}
-
-/* line 11, ../sass/_elements.scss */
-.search-form {
-  margin: 0 -15px;
-  margin: 0 auto;
-}
-/* line 14, ../sass/_elements.scss */
-.search-form .input {
-  padding: 0;
-  width: 75%;
-}
-@media only screen and (max-width: 767px) {
-  /* line 14, ../sass/_elements.scss */
-  .search-form .input {
-    float: none;
-    width: auto;
-  }
-}
-@media only screen and (max-width: 767px) {
-  /* line 14, ../sass/_elements.scss */
-  .search-form .input {
-    float: left;
-    position: relative;
-    min-height: 1px;
-    padding: 0;
-    width: 75%;
-  }
-}
-/* line 17, ../sass/_elements.scss */
-.search-form .input input {
-  width: 100%;
-  height: 20px;
-  margin-top: 2px;
-  padding-left: 6px;
-  border: 1px solid #cccccc;
-  border-top: 2px solid #b3b3b3;
-  -webkit-border-radius: 2px;
-  -moz-border-radius: 2px;
-  -ms-border-radius: 2px;
-  -o-border-radius: 2px;
-  border-radius: 2px;
-}
-/* line 27, ../sass/_elements.scss */
-.search-form .submit {
-  padding: 0;
-  width: 25%;
-}
-@media only screen and (max-width: 767px) {
-  /* line 27, ../sass/_elements.scss */
-  .search-form .submit {
-    float: none;
-    width: auto;
-  }
-}
-@media only screen and (max-width: 767px) {
-  /* line 27, ../sass/_elements.scss */
-  .search-form .submit {
-    float: left;
-    position: relative;
-    min-height: 1px;
-    padding: 0;
-    width: 25%;
-  }
-}
-
-/* line 34, ../sass/_elements.scss */
-.widget ul {
-  list-style: none;
-}
-/* line 37, ../sass/_elements.scss */
-.widget h5 {
-  color: #dc3f1c;
+/* line 78, ../sass/homepage.scss */
+#mc_signup .mc_merge_var, #mc_signup .mc_signup_submit, #mc_signup label {
+  display: block;
   margin-bottom: 5px;
-  font-size: 1.8em;
 }
-/* line 42, ../sass/_elements.scss */
-.widget li {
-  margin-bottom: 0;
-  margin: 4px 0;
-  text-align: left;
+/* line 83, ../sass/homepage.scss */
+#mc_signup .mc_signup_submit {
+  text-align: right;
 }
-/* line 47, ../sass/_elements.scss */
-.widget li.current-cat a {
-  color: #dc3f1c;
-}
-/* line 52, ../sass/_elements.scss */
-.widget a {
-  color: black;
-  font-size: .8em;
-  font-family: "Montserrat", sans-serif;
-  letter-spacing: 2px;
-  text-transform: uppercase;
-}
-/* line 57, ../sass/_elements.scss */
-.widget .textwidget {
-  line-height: 1.3em;
-}
-
-/* line 62, ../sass/_elements.scss */
-.pagination {
-  margin: 10px 0;
-  list-style: none;
-  text-align: center;
-  padding-top: 10px;
-  padding-bottom: 10px;
-  border-top: 1px solid #dc3f1c;
-  border-bottom: 1px solid #dc3f1c;
-}
-/* line 70, ../sass/_elements.scss */
-.pagination li {
-  display: inline-block;
-  margin: 0 8px;
-  font-family: "Ostrich Sans", sans-serif;
-  font-size: 1.3em;
-}
-/* line 75, ../sass/_elements.scss */
-.pagination li.current {
-  color: black;
-}
-
-/* line 3, ../sass/_comments.scss */
-.commentlist, .comment-author, .comment {
-  *zoom: 1;
-}
-/* line 4, ../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/zurb-foundation-3.2.5/scss/foundation/mixins/_clearfix.scss */
-.commentlist:before, .commentlist:after, .comment-author:before, .comment-author:after, .comment:before, .comment:after {
-  content: " ";
-  display: table;
-}
-/* line 5, ../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/zurb-foundation-3.2.5/scss/foundation/mixins/_clearfix.scss */
-.commentlist:after, .comment-author:after, .comment:after {
-  clear: both;
-}
-
-/* line 7, ../sass/_comments.scss */
-ol.commentlist {
-  list-style: none;
-}
-/* line 11, ../sass/_comments.scss */
-ol.commentlist li.comment {
-  padding: 10px;
-}
-/* line 16, ../sass/_comments.scss */
-ol.commentlist li.comment div.vcard cite.fn {
-  font-style: normal;
-}
-/* line 21, ../sass/_comments.scss */
-ol.commentlist li.comment div.vcard img.avatar {
-  float: right;
-  margin: 0;
-}
-/* line 30, ../sass/_comments.scss */
-ol.commentlist li.comment div.comment-meta {
-  font-size: 10px;
-}
-/* line 32, ../sass/_comments.scss */
-ol.commentlist li.comment div.comment-meta a {
-  color: #ccc;
-}
-/* line 38, ../sass/_comments.scss */
-ol.commentlist li.comment div.reply {
-  font-size: 11px;
-}
-/* line 40, ../sass/_comments.scss */
-ol.commentlist li.comment div.reply a {
-  font-weight: bold;
-}
-/* line 44, ../sass/_comments.scss */
-ol.commentlist li.comment ul.children {
-  list-style: none;
-  margin: 0;
-}
-/* line 53, ../sass/_comments.scss */
-ol.commentlist li.parent {
-  border-left: 1px solid #e6e6e6;
-}
-/* line 59, ../sass/_comments.scss */
-ol.commentlist .avatar img {
-  float: left !important;
-}
-/* line 62, ../sass/_comments.scss */
-ol.commentlist .column {
-  padding: 0px;
-}
-/* line 66, ../sass/_comments.scss */
-ol.commentlist .depth-1 {
-  padding-left: 15px;
-  background: #e6e6e6;
-}
-/* line 70, ../sass/_comments.scss */
-ol.commentlist .depth-2 {
-  padding-left: 30px;
-  background: #cccccc;
-}
-/* line 74, ../sass/_comments.scss */
-ol.commentlist .depth-3 {
-  padding-left: 45px;
-  background: #b3b3b3;
-}
-/* line 78, ../sass/_comments.scss */
-ol.commentlist .depth-4 {
-  padding-left: 60px;
-  background: #999999;
-}
-/* line 83, ../sass/_comments.scss */
-ol.commentlist .button {
-  padding: 4px 10px;
-  margin-bottom: 15px;
-  position: relative;
-  float: right;
-}
-
-/* line 91, ../sass/_comments.scss */
-.commentlist {
-  list-style: none;
-  padding: 0;
-}
-/* line 94, ../sass/_comments.scss */
-.commentlist .comment-body {
-  padding: 5px 0;
-  border-top: 1px solid #CCC;
-  border-bottom: 1px solid #CCC;
-}
-/* line 99, ../sass/_comments.scss */
-.commentlist .comment-body .comment-author .fn {
-  font-style: normal;
-  font-size: 25px;
-}
-/* line 103, ../sass/_comments.scss */
-.commentlist .comment-body .comment-author .says {
-  font-style: italic;
-}
-/* line 107, ../sass/_comments.scss */
-.commentlist .comment-body .comment-meta {
+/* line 87, ../sass/homepage.scss */
+#mc_signup .mergeRow {
   display: none;
 }
-/* line 111, ../sass/_comments.scss */
-.commentlist .panel {
-  border-bottom: none;
-  background: none;
+/* line 91, ../sass/homepage.scss */
+#mc_signup #mc_message {
+  margin-bottom: 15px;
 }
-
-/* line 117, ../sass/_comments.scss */
-#commentform {
-  background: #f2f2f2;
-  padding: 15px;
-  *zoom: 1;
-}
-/* line 4, ../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/zurb-foundation-3.2.5/scss/foundation/mixins/_clearfix.scss */
-#commentform:before, #commentform:after {
-  content: " ";
-  display: table;
-}
-/* line 5, ../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/zurb-foundation-3.2.5/scss/foundation/mixins/_clearfix.scss */
-#commentform:after {
-  clear: both;
-}
-/* line 121, ../sass/_comments.scss */
-#commentform li {
-  margin-bottom: 5px;
-  *zoom: 1;
-}
-/* line 4, ../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/zurb-foundation-3.2.5/scss/foundation/mixins/_clearfix.scss */
-#commentform li:before, #commentform li:after {
-  content: " ";
-  display: table;
-}
-/* line 5, ../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/zurb-foundation-3.2.5/scss/foundation/mixins/_clearfix.scss */
-#commentform li:after {
-  clear: both;
-}
-/* line 125, ../sass/_comments.scss */
-#commentform li label {
-  width: 25%;
-  padding-left: 0px;
-}
-@media only screen and (max-width: 767px) {
-  /* line 125, ../sass/_comments.scss */
-  #commentform li label {
-    float: none;
-    width: auto;
-  }
-}
-/* line 129, ../sass/_comments.scss */
-#commentform li input {
-  width: 75%;
-  padding: 3px 5px;
-}
-@media only screen and (max-width: 767px) {
-  /* line 129, ../sass/_comments.scss */
-  #commentform li input {
-    float: none;
-    width: auto;
-  }
-}
-/* line 134, ../sass/_comments.scss */
-#commentform textarea {
+/* line 95, ../sass/homepage.scss */
+#mc_signup .mc_input {
+  height: 26px;
+  font-size: 1.2em;
   width: 100%;
-  min-height: 100px;
 }
-
-/*
-    Example usage:
-    @include animation(spin, 2s, linear, infinite);
- */
-/*
-Sets the background image to fill the enclosing div.
-
-Format:
-
-$file: Image Name and path relative to /images
-$extention: Image expention with "."
-$retina: True/fale if the image has retina optimized verison in the format "image_name@2x"
-$ie: If the mixin is being used in a ie8 selector div (lt-ie9)
-$attachment: When attachment is set to "fixed", it will remain fixed relative to the browser window. "scroll" will move as normal.
-$position: The placement of the background in relation to its div
-
-*/
-/* line 2, ../sass/_posts.scss */
-.blog .post {
-  padding-top: 15px;
-  border-top: 1px solid #dc3f1c;
-}
-/* line 5, ../sass/_posts.scss */
-.blog .post:first-child {
-  border-top: none;
-  padding-top: 0px;
-}
-
-/* line 3, ../sass/_artifact.scss */
-.single-artifact h1, .post-type-archive-artifact h1 {
-  margin-top: 0;
-}
-/* line 7, ../sass/_artifact.scss */
-.single-artifact #artifactArchive, .post-type-archive-artifact #artifactArchive {
-  width: 20%;
-  float: left;
-  display: block;
-  position: relative;
-  padding: 0 15px;
-  right: 80%;
-}
-@media only screen and (min-width: 0px) and (max-width: 767px), only screen and (min-device-width: 0px) and (max-device-width: 767px) {
-  /* line 7, ../sass/_artifact.scss */
-  .single-artifact #artifactArchive, .post-type-archive-artifact #artifactArchive {
-    width: 100%;
-    float: none;
-  }
-}
-@media only screen and (min-width: 0px) and (max-width: 767px), only screen and (min-device-width: 0px) and (max-device-width: 767px) {
-  /* line 7, ../sass/_artifact.scss */
-  .single-artifact #artifactArchive, .post-type-archive-artifact #artifactArchive {
-    right: 0;
-  }
-}
-/* line 11, ../sass/_artifact.scss */
-.single-artifact #main, .post-type-archive-artifact #main {
-  width: 80%;
-  float: left;
-  display: block;
-  position: relative;
-  padding: 0 15px;
-  left: 20%;
-}
-@media only screen and (min-width: 0px) and (max-width: 767px), only screen and (min-device-width: 0px) and (max-device-width: 767px) {
-  /* line 11, ../sass/_artifact.scss */
-  .single-artifact #main, .post-type-archive-artifact #main {
-    width: 100%;
-    float: none;
-  }
-}
-@media only screen and (min-width: 0px) and (max-width: 767px), only screen and (min-device-width: 0px) and (max-device-width: 767px) {
-  /* line 11, ../sass/_artifact.scss */
-  .single-artifact #main, .post-type-archive-artifact #main {
-    left: 0;
-  }
-}
-/* line 15, ../sass/_artifact.scss */
-.single-artifact aside.sidebar, .post-type-archive-artifact aside.sidebar {
-  border-right: 1px solid #dc3f1c;
-}
-@media only screen and (min-width: 0px) and (max-width: 767px), only screen and (min-device-width: 0px) and (max-device-width: 767px) {
-  /* line 15, ../sass/_artifact.scss */
-  .single-artifact aside.sidebar, .post-type-archive-artifact aside.sidebar {
-    border-right: none;
-    border-top: 1px solid #dc3f1c;
-    margin-top: 15px;
-    padding-top: 15px !important;
-  }
-}
-
-/* line 27, ../sass/_artifact.scss */
-.post-type-archive-artifact .artifact {
-  *zoom: 1;
-  background: #f2f2f2;
-  margin-bottom: 10px;
+/* line 101, ../sass/homepage.scss */
+#mc_signup .mc_success_msg, #mc_signup .mc_error_msg {
+  color: white;
+  margin: 0 15px;
+  padding: 5px;
   -webkit-border-radius: 3px;
   -moz-border-radius: 3px;
   -ms-border-radius: 3px;
   -o-border-radius: 3px;
   border-radius: 3px;
 }
-/* line 4, ../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/zurb-foundation-3.2.5/scss/foundation/mixins/_clearfix.scss */
-.post-type-archive-artifact .artifact:before, .post-type-archive-artifact .artifact:after {
-  content: " ";
-  display: table;
+/* line 107, ../sass/homepage.scss */
+#mc_signup .mc_success_msg a, #mc_signup .mc_error_msg a {
+  color: white;
+  text-decoration: underline;
 }
-/* line 5, ../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/zurb-foundation-3.2.5/scss/foundation/mixins/_clearfix.scss */
-.post-type-archive-artifact .artifact:after {
-  clear: both;
+/* line 114, ../sass/homepage.scss */
+#mc_signup .mc_success_msg {
+  background: green;
 }
-/* line 32, ../sass/_artifact.scss */
-.post-type-archive-artifact .artifact aside {
-  display: block;
-  padding: 0;
-  float: left;
-  width: 25%;
-  margin-right: 15px;
-}
-/* line 38, ../sass/_artifact.scss */
-.post-type-archive-artifact .artifact aside a {
-  display: block;
-  margin-bottom: -1px;
-}
-/* line 42, ../sass/_artifact.scss */
-.post-type-archive-artifact .artifact aside img {
-  margin-bottom: 0 !important;
-  border-right: 1px solid #cccccc;
-}
-/* line 47, ../sass/_artifact.scss */
-.post-type-archive-artifact .artifact .post_content {
-  width: 100%;
-  padding: 0 15px;
-}
-/* line 51, ../sass/_artifact.scss */
-.post-type-archive-artifact .artifact .post_content h3 {
-  margin-bottom: 5px;
-}
-
-/* line 59, ../sass/_artifact.scss */
-.single-artifact .artifact {
-  *zoom: 1;
-}
-/* line 4, ../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/zurb-foundation-3.2.5/scss/foundation/mixins/_clearfix.scss */
-.single-artifact .artifact:before, .single-artifact .artifact:after {
-  content: " ";
-  display: table;
-}
-/* line 5, ../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/zurb-foundation-3.2.5/scss/foundation/mixins/_clearfix.scss */
-.single-artifact .artifact:after {
-  clear: both;
-}
-/* line 61, ../sass/_artifact.scss */
-.single-artifact .artifact .post_content {
-  width: 70%;
-  float: left;
-  display: block;
-  position: relative;
-  padding: 0 15px;
-}
-@media only screen and (min-width: 0px) and (max-width: 767px), only screen and (min-device-width: 0px) and (max-device-width: 767px) {
-  /* line 61, ../sass/_artifact.scss */
-  .single-artifact .artifact .post_content {
-    width: 100%;
-    float: none;
-  }
-}
-/* line 64, ../sass/_artifact.scss */
-.single-artifact .artifact .metadata {
-  width: 30%;
-  float: left;
-  display: block;
-  position: relative;
-  padding: 0 15px;
-  padding-top: 15px;
-  padding-bottom: 15px;
-  background: #e6e6e6;
-}
-@media only screen and (min-width: 0px) and (max-width: 767px), only screen and (min-device-width: 0px) and (max-device-width: 767px) {
-  /* line 64, ../sass/_artifact.scss */
-  .single-artifact .artifact .metadata {
-    width: 100%;
-    float: none;
-  }
-}
-/* line 70, ../sass/_artifact.scss */
-.single-artifact .artifact .metadata img {
-  border: 1px solid white;
-}
-/* line 74, ../sass/_artifact.scss */
-.single-artifact .artifact .metadata .metadata-item {
-  margin-bottom: 5px;
-}
-/* line 77, ../sass/_artifact.scss */
-.single-artifact .artifact .metadata strong {
-  margin-right: 5px;
-  display: inline-block;
+/* line 118, ../sass/homepage.scss */
+#mc_signup .mc_error_msg {
+  background: red;
 }

@@ -42,7 +42,7 @@ ul, ol, dl {
     li {
         margin-bottom: 0;
         margin:        4px 0;
-        text-align:    center;
+        text-align:    left;
         &.current-cat {
             a {
                 color: $red;
@@ -53,6 +53,9 @@ ul, ol, dl {
         color:     $black;
         font-size: .8em;
         @include subheader();
+    }
+    .textwidget {
+        line-height: 1.3em;
     }
 }
 
