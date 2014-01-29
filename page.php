@@ -1,55 +1,48 @@
 <?php get_header(); ?>
-			
-			<div id="content">
-			
-				<div id="main" class="eight columns clearfix" role="main">
 
-					<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
-					
-					<article id="post-<?php the_ID(); ?>" <?php post_class('clearfix'); ?> role="article" itemscope itemtype="http://schema.org/BlogPosting">
-						
-						<header>
-							
-							<h1 class="page-title" itemprop="headline"><?php the_title(); ?></h1>
-						
-						</header> <!-- end article header -->
-					
-						<section class="post_content clearfix" itemprop="articleBody">
-							<?php the_content(); ?>
-					
-						</section> <!-- end article section -->
-						
-						<footer>
-			
-							<?php the_tags('<p class="tags"><span class="tags-title">Tags:</span> ', ', ', '</p>'); ?>
-							
-						</footer> <!-- end article footer -->
-					
-					</article> <!-- end article -->
-					
-					<?php comments_template(); ?>
-					
-					<?php endwhile; ?>		
-					
-					<?php else : ?>
-					
-					<article id="post-not-found">
-					    <header>
-					    	<h1>Not Found</h1>
-					    </header>
-					    <section class="post_content">
-					    	<p>Sorry, but the requested resource was not found on this site.</p>
-					    </section>
-					    <footer>
-					    </footer>
-					</article>
-					
-					<?php endif; ?>
-			
-				</div> <!-- end #main -->
-    
-				<?php get_sidebar(); // sidebar 1 ?>
-    
-			</div> <!-- end #content -->
+<div id="pageContent">
+
+	<?php while ( have_posts() ) : the_post(); ?>
+
+        <?php if (has_post_thumbnail()) : ?>
+            <?php
+                $splash_src = wp_get_attachment_image_src( get_post_thumbnail_id(), $size='wpf-home-featured' );
+            ?>
+            <header class="header-image" style="background-image: url('<?php echo $splash_src[0] ?>');";
+        <?php endif; ?>
+        <header class="no-header-image">
+            <h1 class="page-title" itemprop="headline"><?php the_title(); ?></h1>
+        </header>
+
+        <div id="pageMain" class="clearfix" role="main">
+
+            <article id="post-<?php the_ID(); ?>" <?php post_class('eight columns'); ?> role="article" itemscope itemtype="http://schema.org/BlogPosting">
+
+				<section class="post_content clearfix" itemprop="articleBody">
+					<?php the_content(); ?>
+
+				</section> <!-- end article section -->
+
+				<footer>
+
+					<?php the_tags('<p class="tags"><span class="tags-title">Tags:</span> ', ', ', '</p>'); ?>
+
+				</footer> <!-- end article footer -->
+
+            <?php comments_template(); ?>
+
+            </article> <!-- end article -->
+
+            <?php get_sidebar(); // sidebar 1 ?>
+
+        </div> <!-- end #main -->
+
+
+
+    <?php endwhile; ?>
+
+
+
+</div> <!-- end #content -->
 
 <?php get_footer(); ?>

@@ -1,0 +1,33 @@
+#pageContent {
+    @include clearfix();
+    .header-image {
+        @include box-shadow(inset 0 0 10px rgba($black, .75));
+        @include background-size(100% auto);
+        background-position:   center center;
+        background-repeat:     no-repeat;
+        width:                 100%;
+        h1 {
+            @include outerRow();
+            color:          $white;
+            text-shadow:    0 0 7px $black;
+            font-size:      4em;
+            padding:        90px $columnGutter/2 $columnGutter/2;
+            text-align:     left;
+            @include media-query() {
+                font-size: 3em;
+            }
+        }
+    }
+
+    .no-header-image {
+        @include outerRow();
+        h1 {
+            padding: $columnGutter/2;
+        }
+    }
+
+    #pageMain {
+        @include outerRow();
+        margin-top: $columnGutter;
+    }
+}
