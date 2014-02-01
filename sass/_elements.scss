@@ -51,11 +51,24 @@ ul, ol, dl {
     }
     a {
         color:     $black;
-        font-size: .8em;
-        @include subheader();
+        line-height: 1.4em;
     }
     .textwidget {
         line-height: 1.3em;
+    }
+    &.widget_recent_entries {
+        li {
+            margin-bottom: 12px;
+            line-height:   1.1em;
+        }
+        a {
+            display: block;
+            font-size: .8em;
+            @include subheader();
+        }
+        .post-date {
+            display: block;
+        }
     }
 }
 

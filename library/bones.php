@@ -112,7 +112,7 @@ function bones_mobile_nav() {
     		'theme_location' => 'main_nav', /* where in the theme it's assigned */
     		'container_class' => 'mobile-nav-container', /* container tag */
     		'fallback_cb' => 'bones_main_nav_fallback', /* menu fallback */
-    		'depth' => '1'
+    		'depth' => '2'
     	)
     );
 }

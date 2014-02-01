@@ -84,12 +84,13 @@ nav.main {
     }
 
     .flyout {
-        width:    auto;
-        position: absolute;
-        display:  none;
-        left:     0;
-        z-index:  11;
-        border:   1px solid $red;
+        width:     auto;
+        min-width: 170px;
+        position:  absolute;
+        display:   none;
+        left:      0;
+        z-index:   11;
+        border:    1px solid $red;
         > li {
             width:      100%;
         }
@@ -195,6 +196,16 @@ nav.main {
                 background: none;
                 border:     none;
                 @include box-shadow(none);
+            }
+            > ul {
+                list-style: none;
+                >li a{
+                    color: $grey-4;
+                    &:before {
+                        content:      '-';
+                        margin-right: 3px;
+                    }
+                }
             }
         }
 	}

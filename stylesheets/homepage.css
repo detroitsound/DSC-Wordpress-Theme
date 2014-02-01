@@ -1979,47 +1979,35 @@ table.hide-for-medium {
     width: auto;
   }
 }
-/* line 61, ../sass/homepage.scss */
-#homepageContent #sidebar .widget_recent_entries li {
-  margin-bottom: 12px;
-  line-height: 1.1em;
-}
-/* line 65, ../sass/homepage.scss */
-#homepageContent #sidebar .widget_recent_entries a {
-  display: block;
-}
-/* line 68, ../sass/homepage.scss */
-#homepageContent #sidebar .widget_recent_entries .post-date {
-  display: block;
-}
 
-/* line 78, ../sass/homepage.scss */
+/* line 65, ../sass/homepage.scss */
 #mc_signup .mc_merge_var, #mc_signup .mc_signup_submit, #mc_signup label {
   display: block;
   margin-bottom: 5px;
 }
-/* line 83, ../sass/homepage.scss */
+/* line 70, ../sass/homepage.scss */
 #mc_signup .mc_signup_submit {
   text-align: right;
 }
-/* line 87, ../sass/homepage.scss */
+/* line 74, ../sass/homepage.scss */
 #mc_signup .mergeRow {
   display: none;
 }
-/* line 91, ../sass/homepage.scss */
+/* line 78, ../sass/homepage.scss */
 #mc_signup #mc_message {
   margin-bottom: 15px;
 }
-/* line 95, ../sass/homepage.scss */
+/* line 82, ../sass/homepage.scss */
 #mc_signup .mc_input {
   height: 26px;
   font-size: 1.2em;
   width: 100%;
 }
-/* line 101, ../sass/homepage.scss */
+/* line 88, ../sass/homepage.scss */
 #mc_signup .mc_success_msg, #mc_signup .mc_error_msg {
   color: white;
-  margin: 0 15px;
+  display: block;
+  margin: 0;
   padding: 5px;
   -webkit-border-radius: 3px;
   -moz-border-radius: 3px;
@@ -2027,16 +2015,16 @@ table.hide-for-medium {
   -o-border-radius: 3px;
   border-radius: 3px;
 }
-/* line 107, ../sass/homepage.scss */
+/* line 95, ../sass/homepage.scss */
 #mc_signup .mc_success_msg a, #mc_signup .mc_error_msg a {
   color: white;
   text-decoration: underline;
 }
-/* line 114, ../sass/homepage.scss */
+/* line 102, ../sass/homepage.scss */
 #mc_signup .mc_success_msg {
   background: green;
 }
-/* line 118, ../sass/homepage.scss */
+/* line 106, ../sass/homepage.scss */
 #mc_signup .mc_error_msg {
   background: red;
 }

@@ -1,8 +1,8 @@
-@import '_settings.scss';
-@import '_dsc-settings.scss';
-@import '_animation.scss';
+@import "settings";
+@import "_dsc-settings.scss";
 @import "compass/css3";
-@import "foundation";
+@import "_foundation-mixins.scss";
+@import "_animation.scss";
 
 
 #content {
