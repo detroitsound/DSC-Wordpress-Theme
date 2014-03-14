@@ -1904,6 +1904,10 @@ table.hide-for-medium {
   background-repeat: no-repeat;
 }
 /* line 24, ../sass/homepage.scss */
+#homepageContent article.no-image {
+  background-color: #dc3f1c;
+}
+/* line 28, ../sass/homepage.scss */
 #homepageContent .post_content {
   width: 1000px;
   max-width: 100%;
@@ -1914,7 +1918,7 @@ table.hide-for-medium {
   display: table;
 }
 @media only screen and (max-width: 767px) {
-  /* line 24, ../sass/homepage.scss */
+  /* line 28, ../sass/homepage.scss */
   #homepageContent .post_content {
     width: auto;
     min-width: 0;
@@ -1922,35 +1926,41 @@ table.hide-for-medium {
     margin-right: 0;
   }
 }
+@media only screen and (min-width: 768px) and (max-width: 1000px), only screen and (min-device-width: 768px) and (max-device-width: 1000px) {
+  /* line 28, ../sass/homepage.scss */
+  #homepageContent .post_content {
+    width: 100%;
+  }
+}
 @media only screen and (min-width: 0px) and (max-width: 767px), only screen and (min-device-width: 0px) and (max-device-width: 767px) {
-  /* line 24, ../sass/homepage.scss */
+  /* line 28, ../sass/homepage.scss */
   #homepageContent .post_content {
     width: 100%;
     padding: 60px 15px;
   }
 }
-/* line 33, ../sass/homepage.scss */
+/* line 40, ../sass/homepage.scss */
 #homepageContent .post_content .align-content {
   display: table-cell;
   vertical-align: middle;
   text-align: center;
 }
-/* line 40, ../sass/homepage.scss */
+/* line 47, ../sass/homepage.scss */
 #homepageContent h1, #homepageContent p {
   color: white;
   text-shadow: 0 0 7px black;
 }
-/* line 45, ../sass/homepage.scss */
+/* line 52, ../sass/homepage.scss */
 #homepageContent h1 {
   font-size: 4em;
 }
 @media only screen and (min-width: 0px) and (max-width: 767px), only screen and (min-device-width: 0px) and (max-device-width: 767px) {
-  /* line 45, ../sass/homepage.scss */
+  /* line 52, ../sass/homepage.scss */
   #homepageContent h1 {
     font-size: 3em;
   }
 }
-/* line 52, ../sass/homepage.scss */
+/* line 59, ../sass/homepage.scss */
 #homepageContent #sidebar {
   width: 1000px;
   max-width: 100%;
@@ -1960,7 +1970,7 @@ table.hide-for-medium {
   margin-bottom: 30px;
 }
 @media only screen and (max-width: 767px) {
-  /* line 52, ../sass/homepage.scss */
+  /* line 59, ../sass/homepage.scss */
   #homepageContent #sidebar {
     width: auto;
     min-width: 0;
@@ -1968,42 +1978,42 @@ table.hide-for-medium {
     margin-right: 0;
   }
 }
-/* line 56, ../sass/homepage.scss */
+/* line 63, ../sass/homepage.scss */
 #homepageContent #sidebar .widget {
   width: 33.33333%;
 }
 @media only screen and (max-width: 767px) {
-  /* line 56, ../sass/homepage.scss */
+  /* line 63, ../sass/homepage.scss */
   #homepageContent #sidebar .widget {
     float: none;
     width: auto;
   }
 }
 
-/* line 65, ../sass/homepage.scss */
+/* line 72, ../sass/homepage.scss */
 #mc_signup .mc_merge_var, #mc_signup .mc_signup_submit, #mc_signup label {
   display: block;
   margin-bottom: 5px;
 }
-/* line 70, ../sass/homepage.scss */
+/* line 77, ../sass/homepage.scss */
 #mc_signup .mc_signup_submit {
   text-align: right;
 }
-/* line 74, ../sass/homepage.scss */
+/* line 81, ../sass/homepage.scss */
 #mc_signup .mergeRow {
   display: none;
 }
-/* line 78, ../sass/homepage.scss */
+/* line 85, ../sass/homepage.scss */
 #mc_signup #mc_message {
   margin-bottom: 15px;
 }
-/* line 82, ../sass/homepage.scss */
+/* line 89, ../sass/homepage.scss */
 #mc_signup .mc_input {
   height: 26px;
   font-size: 1.2em;
   width: 100%;
 }
-/* line 88, ../sass/homepage.scss */
+/* line 95, ../sass/homepage.scss */
 #mc_signup .mc_success_msg, #mc_signup .mc_error_msg {
   color: white;
   display: block;
@@ -2015,16 +2025,16 @@ table.hide-for-medium {
   -o-border-radius: 3px;
   border-radius: 3px;
 }
-/* line 95, ../sass/homepage.scss */
+/* line 102, ../sass/homepage.scss */
 #mc_signup .mc_success_msg a, #mc_signup .mc_error_msg a {
   color: white;
   text-decoration: underline;
 }
-/* line 102, ../sass/homepage.scss */
+/* line 109, ../sass/homepage.scss */
 #mc_signup .mc_success_msg {
   background: green;
 }
-/* line 106, ../sass/homepage.scss */
+/* line 113, ../sass/homepage.scss */
 #mc_signup .mc_error_msg {
   background: red;
 }

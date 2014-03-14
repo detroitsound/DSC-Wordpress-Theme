@@ -20,12 +20,19 @@
         @include background-size(100% auto);
         background-position:   center center;
         background-repeat:     no-repeat;
+
+        &.no-image {
+            background-color: $red;
+        }
     }
     .post_content {
         @include outerRow();
         padding-top:    100px;
         padding-bottom: 100px;
         display:        table;
+        @include media-query(1000px, 768px) {
+            width: 100%;
+        }
         @include media-query() {
             width:   100%;
             padding: 60px $columnGutter/2;

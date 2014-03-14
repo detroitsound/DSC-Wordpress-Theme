@@ -13,8 +13,12 @@ Make sure to have a custom field titled 'background-image'
 
         <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 
-            <article id="post-<?php the_ID(); ?>" <?php post_class('clearfix'); ?> style="background-image: url('<?php echo get_post_meta($post->ID, 'background-image', true); ?>');">
-
+            <?php if (has_post_thumbnail( $post->ID ) ): ?>
+                <?php $image = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'single-post-thumbnail' ); ?>
+                <article id="post-<?php the_ID(); ?>" <?php post_class('clearfix'); ?> style="background-image: url('<?php echo $image[0]; ?>');">
+            <?php else: ?>
+                <article id="post-<?php the_ID(); ?>" <?php post_class('clearfix no-image'); ?>>
+            <?php endif; ?>
                 <section class="post_content" itemprop="articleBody">
                     <div class="align-content">
                         <?php the_content(); ?>

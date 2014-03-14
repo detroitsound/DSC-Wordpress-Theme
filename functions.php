@@ -38,6 +38,7 @@ add_filter('admin_footer_text', 'bones_custom_admin_footer');
 // Thumbnail sizes
 add_image_size( 'wpf-featured', 737, 365, true );
 add_image_size ( 'wpf-home-featured', 970, 364, true );
+add_image_size( 'hompage-featured', 1250, 950, false );
 add_image_size( 'artifact-archive-thumb', 300, 300, true );
 add_image_size( 'bones-thumb-600', 600, 150, false );
 add_image_size( 'bones-thumb-300', 300, 100, true );
