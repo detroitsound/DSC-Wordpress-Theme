@@ -1,7 +1,7 @@
         			<footer role="contentinfo" id="bottom-footer">
 
                         <a class="brand" id="logo" href="<?php echo get_bloginfo('url'); ?>">
-            			    <img src="<?php bloginfo( 'stylesheet_directory' ); ?>/images/logo.svg" alt="<?php bloginfo('name'); ?>" onerror="this.onerror=null; this.src='<?php bloginfo( 'stylesheet_directory' ); ?>/images/logo.png'" />
+            			    <img src="<?php bloginfo( 'stylesheet_directory' ); ?>/images/logo.png" alt="<?php bloginfo('name'); ?>" />
             		    </a>
 
         				<nav class="main">

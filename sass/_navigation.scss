@@ -214,8 +214,7 @@ nav.main {
 .csstransforms3d {
     #bodyWrapper {
         &.animate {
-            position:   fixed;
-            background: $grey-1;
+            position:   relative;
             @include perspective(1500px);
 
             #container {
@@ -238,7 +237,10 @@ nav.main {
                 display: block;
                 left: 0;
             }
+        }
 
+        #container {
+            @include transform(translateZ(0) translateX(0) rotateY(0));
         }
     }
 }

@@ -2653,15 +2653,14 @@ nav.main a.flyout-toggle span {
 
 /* line 216, ../sass/_navigation.scss */
 .csstransforms3d #bodyWrapper.animate {
-  position: fixed;
-  background: #e6e6e6;
+  position: relative;
   -webkit-perspective: 1500px;
   -moz-perspective: 1500px;
   -ms-perspective: 1500px;
   -o-perspective: 1500px;
   perspective: 1500px;
 }
-/* line 221, ../sass/_navigation.scss */
+/* line 220, ../sass/_navigation.scss */
 .csstransforms3d #bodyWrapper.animate #container {
   -webkit-transform: translateZ(-1500px) translateX(100%) rotateY(-45deg);
   -moz-transform: translateZ(-1500px) translateX(100%) rotateY(-45deg);
@@ -2679,7 +2678,7 @@ nav.main a.flyout-toggle span {
   -o-backface-visibility: hidden;
   backface-visibility: hidden;
 }
-/* line 230, ../sass/_navigation.scss */
+/* line 229, ../sass/_navigation.scss */
 .csstransforms3d #bodyWrapper.animate #container:after {
   opacity: 1;
   height: 101%;
@@ -2688,25 +2687,33 @@ nav.main a.flyout-toggle span {
   -o-transition: opacity 0.3s;
   transition: opacity 0.3s;
 }
-/* line 237, ../sass/_navigation.scss */
+/* line 236, ../sass/_navigation.scss */
 .csstransforms3d #bodyWrapper.animate #mobileMenu {
   display: block;
   left: 0;
 }
+/* line 242, ../sass/_navigation.scss */
+.csstransforms3d #bodyWrapper #container {
+  -webkit-transform: translateZ(0) translateX(0) rotateY(0);
+  -moz-transform: translateZ(0) translateX(0) rotateY(0);
+  -ms-transform: translateZ(0) translateX(0) rotateY(0);
+  -o-transform: translateZ(0) translateX(0) rotateY(0);
+  transform: translateZ(0) translateX(0) rotateY(0);
+}
 
-/* line 246, ../sass/_navigation.scss */
+/* line 248, ../sass/_navigation.scss */
 .no-csstransforms3d #bodyWrapper.animate #container {
   left: 75%;
 }
 
-/* line 251, ../sass/_navigation.scss */
+/* line 253, ../sass/_navigation.scss */
 #bodyWrapper {
   width: 100%;
   height: 100%;
   position: relative;
 }
 
-/* line 257, ../sass/_navigation.scss */
+/* line 259, ../sass/_navigation.scss */
 #container {
   background: #fff;
   min-height: 100%;
@@ -2723,7 +2730,7 @@ nav.main a.flyout-toggle span {
   -o-transform-origin: 50% 50% 50%;
   transform-origin: 50% 50% 50%;
 }
-/* line 266, ../sass/_navigation.scss */
+/* line 268, ../sass/_navigation.scss */
 #container:after {
   content: '';
   position: absolute;
@@ -2740,7 +2747,7 @@ nav.main a.flyout-toggle span {
   transition: opacity 0.4s, height 0s 0.4s;
 }
 
-/* line 279, ../sass/_navigation.scss */
+/* line 281, ../sass/_navigation.scss */
 .modalview {
   -webkit-perspective: 1500px;
   -moz-perspective: 1500px;
@@ -2748,7 +2755,7 @@ nav.main a.flyout-toggle span {
   -o-perspective: 1500px;
   perspective: 1500px;
 }
-/* line 281, ../sass/_navigation.scss */
+/* line 283, ../sass/_navigation.scss */
 .modalview .container {
   position: absolute;
   overflow: hidden;
@@ -2758,13 +2765,13 @@ nav.main a.flyout-toggle span {
   -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
 }
-/* line 290, ../sass/_navigation.scss */
+/* line 292, ../sass/_navigation.scss */
 .modalview #contentWrapper {
   -webkit-transform: translateZ(-1px);
   /* solves a rendering bug in Chrome on Windows */
 }
 
-/* line 296, ../sass/_navigation.scss */
+/* line 298, ../sass/_navigation.scss */
 #mobileMenu {
   display: none;
   position: relative;
@@ -2778,7 +2785,7 @@ nav.main a.flyout-toggle span {
   transition: 1s;
 }
 
-/* line 306, ../sass/_navigation.scss */
+/* line 308, ../sass/_navigation.scss */
 #wpadminbar {
   position: fixed;
 }
