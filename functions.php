@@ -42,6 +42,7 @@ add_image_size( 'hompage-featured', 1250, 950, false );
 add_image_size( 'artifact-archive-thumb', 300, 300, true );
 add_image_size( 'bones-thumb-600', 600, 150, false );
 add_image_size( 'bones-thumb-300', 300, 100, true );
+add_image_size( 'og-image', 600, 315, true );
 /*
 to add more sizes, simply copy a line from above
 and change the dimensions & name. As long as you

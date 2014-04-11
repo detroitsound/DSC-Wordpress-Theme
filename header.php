@@ -14,15 +14,18 @@
 
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-		<!-- icons & favicons -->
-		<!-- For iPhone 4 -->
-		<link rel="apple-touch-icon-precomposed" sizes="114x114" href="<?php echo get_template_directory_uri(); ?>/library/images/icons/h/apple-touch-icon.png">
-		<!-- For iPad 1-->
-		<link rel="apple-touch-icon-precomposed" sizes="72x72" href="<?php echo get_template_directory_uri(); ?>/library/images/icons/m/apple-touch-icon.png">
-		<!-- For iPhone 3G, iPod Touch and Android -->
-		<link rel="apple-touch-icon-precomposed" href="<?php echo get_template_directory_uri(); ?>/library/images/icons/l/apple-touch-icon-precomposed.png">
-		<!-- For Nokia -->
-		<link rel="shortcut icon" href="<?php echo get_template_directory_uri(); ?>/library/images/icons/l/apple-touch-icon.png">
+        <meta property="og:title" content="<?php the_title(); ?>"/>
+        <meta property="og:description" content="<?php echo strip_tags(get_the_excerpt($post->ID)); ?>" />
+        <meta property="og:url" content="<?php the_permalink(); ?>"/>
+        <?php $fb_image = wp_get_attachment_image_src(get_post_thumbnail_id( get_the_ID() ), 'og-image'); ?>
+        <?php if ($fb_image) : ?>
+            <meta property="og:image" content="<?php echo $fb_image[0]; ?>" />
+        <?php endif; ?>
+        <meta property="og:type" content="<?php
+            if (is_single() || is_page()) { echo "article"; } else { echo "website";} ?>"
+        />
+        <meta property="og:site_name" content="<?php bloginfo('name'); ?>"/>
+
 		<!-- For everything else -->
 		<link rel="shortcut icon" href="<?php echo get_template_directory_uri(); ?>/favicon.ico">
 
@@ -89,18 +92,6 @@
 		}
 
 		?>
-
-        <meta property="og:title" content="<?php the_title(); ?>"/>
-        <meta property="og:description" content="<?php echo strip_tags(get_the_excerpt($post->ID)); ?>" />
-        <meta property="og:url" content="<?php the_permalink(); ?>"/>
-        <?php $fb_image = wp_get_attachment_image_src(get_post_thumbnail_id( get_the_ID() ), 'thumbnail'); ?>
-        <?php if ($fb_image) : ?>
-            <meta property="og:image" content="<?php echo $fb_image[0]; ?>" />
-        <?php endif; ?>
-        <meta property="og:type" content="<?php
-            if (is_single() || is_page()) { echo "article"; } else { echo "website";} ?>"
-        />
-        <meta property="og:site_name" content="<?php bloginfo('name'); ?>"/>
 
 	</head>
 
