@@ -8,6 +8,8 @@
         					<?php bones_footer_links(); ?>
         				</nav>
 
+                        <?php get_sidebar('footer-sidebar'); ?>
+
         			</footer> <!-- end footer -->
                 </div>
             </section>

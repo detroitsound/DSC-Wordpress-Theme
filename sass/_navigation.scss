@@ -3,7 +3,6 @@
     margin-top:    10px;
 
     #logo {
-        float:         left;
         padding:       0 $columnGutter/2;
     }
 
@@ -126,11 +125,12 @@ nav.main {
     margin-bottom: 10px;
     @include media-query() {
         padding-bottom: 5px;
-        margin-bottom:  0px;
-        border-bottom: 1px solid $red;
+        margin-bottom:  10px;
+        border-bottom:  1px solid $red;
     }
     #logo {
         width: 80px + $columnGutter;
+        float:         left;
         @include media-query() {
             width: 50px + $columnGutter;
         }
@@ -156,9 +156,10 @@ nav.main {
     margin-bottom: 20px;
     text-align:    center;
     #logo {
-        width: 60px + $columnGutter;
+        width:          60px + $columnGutter;
+        display:        inline-block;
+        vertical-align: top;
         @include media-query() {
-            float:   none;
             margin:  0 auto;
             display: block;
         }
@@ -172,18 +173,18 @@ nav.main {
 
 
 .mobile-nav-container {
-	width:          100%;
+    width:          100%;
     height:         100%;
-	margin-top:     5px;
-	position:       relative;
+    margin-top:     5px;
+    position:       relative;
     display:        table;
-	@include transition(.2s);
-	ul.tabs {
+    @include transition(.2s);
+    ul.tabs {
         display:        table-cell;
         vertical-align: middle;
         margin-top:     0px;
-    	margin-bottom:  0px;
-    	border-bottom:  none;
+        margin-bottom:  0px;
+        border-bottom:  none;
         list-style:     none;
         padding:        0px;
         li {
@@ -208,7 +209,7 @@ nav.main {
                 }
             }
         }
-	}
+    }
 }
 
 .csstransforms3d {

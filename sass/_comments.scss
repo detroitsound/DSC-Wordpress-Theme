@@ -1,5 +1,3 @@
-
-
 .commentlist, .comment-author, .comment {
     @include clearfix();
 }
@@ -135,4 +133,8 @@ ol.commentlist {
         width:      100%;
         min-height: 100px;
     }
+
+    // label[for="url"], input#url {
+    //     display: none;
+    // }
 }

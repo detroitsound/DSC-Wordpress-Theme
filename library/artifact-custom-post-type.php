@@ -74,7 +74,7 @@ if(is_admin()) {
 $prefix = 'artifact_metadata_';
 $artifact_metadata_fields = array(
     'type' => array(
-        'label'=> 'Type of Material',
+        'label'=> 'Format',
         'type'  => 'text',
         'desc' => 'Audio, Video, Photo, Text, ect.'
     ),
@@ -92,10 +92,6 @@ $artifact_metadata_fields = array(
         'label'=> 'Description',
         'type'  => 'text',
         'desc' => 'Description of the material (ex. mp3, 1mins 30secs)'
-    ),
-    'rights' => array(
-        'label'=> 'Rights Advisory',
-        'type'  => 'text'
     ),
     'summary' => array(
         'label'=> 'Summary',
@@ -133,11 +129,32 @@ $artifact_metadata_fields = array(
         'type'  => 'text',
         'itemprop' => 'genre'
     ),
+    'runtime' => array(
+        'label'=> 'Run Time',
+        'type'  => 'text',
+    ),
     'repository' => array(
         'label'=> 'Repository',
         'type'  => 'text'
+    ),
+    'language' => array(
+        'label'=> 'Language',
+        'type'  => 'text',
+        'itemprop' => 'inLanguage',
+        'desc' => 'In IETF-formatted language tags (\'en\' or \'en-US\')'
+    ),
+    'interviewee' => array(
+        'label'=> 'Interviewee',
+        'type'  => 'text'
+    ),
+    'interviewer' => array(
+        'label'=> 'Interviewer',
+        'type'  => 'text'
+    ),
+    'rights' => array(
+        'label'=> 'Rights Advisory',
+        'type'  => 'text'
     )
-
 );
 
 function print_artifact_metadata($id, $artifact_metadata_array) {
@@ -209,16 +226,16 @@ function show_artifact_metadata() {
 
                     // text
                     case 'text':
-                        echo '<input type="text" name="'.$prefix.$metadata.'" id="'.$prefix.$metadata.'" value="'.$meta.'" size="30" />';
+                        echo '<input type="text" name="'.$prefix.$metadata.'" id="'.$prefix.$metadata.'" value="'.htmlspecialchars($meta).'" size="30" />';
                     break;
 
                     // textarea
                     case 'textarea':
-                        echo '<textarea name="'.$prefix.$metadata.'" id="'.$prefix.$metadata.'">'.$meta.'</textarea>';
+                        echo '<textarea name="'.$prefix.$metadata.'" id="'.$prefix.$metadata.'">'.htmlspecialchars($meta).'</textarea>';
                     break;
 
                     case 'date':
-                        echo '<input type="text" class="datepicker" name="'.$prefix.$metadata.'" id="'.$prefix.$metadata.'" value="'.$meta.'" size="30" />';
+                        echo '<input type="text" class="datepicker" name="'.$prefix.$metadata.'" id="'.$prefix.$metadata.'" value="'.htmlspecialchars($meta).'" size="30" />';
                     break;
 
 

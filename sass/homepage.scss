@@ -15,6 +15,9 @@
 
 #homepageContent {
     @include clearfix();
+    @include media-query() {
+        margin-top: -10px;
+    }
     article {
         @include box-shadow(inset 0 0 10px rgba($black, .75));
         @include background-size(100% auto);
@@ -90,6 +93,10 @@
         height: 26px;
         font-size: 1.2em;
         width: 100%;
+    }
+
+    #mc_signup_submit {
+        width: 100% !important;
     }
 
     .mc_success_msg, .mc_error_msg {

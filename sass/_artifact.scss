@@ -78,6 +78,18 @@
                 margin-right: 5px;
                 display:      inline-block;
             }
+
+            -ms-word-break: break-all;
+
+             /* Be VERY careful with this, breaks normal words wh_erever */
+             word-break: break-all;
+
+             /* Non standard for webkit */
+             word-break: break-word;
+
+            -webkit-hyphens: auto;
+               -moz-hyphens: auto;
+                    hyphens: auto;
         }
     }
 }
