@@ -1993,7 +1993,13 @@ table.hide-for-medium {
     width: auto;
   }
 }
-/* line 16, ../sass/thank-you.scss */
+@media only screen and (min-width: 768px) {
+  /* line 12, ../sass/thank-you.scss */
+  .record-player {
+    left: 16.66667%;
+  }
+}
+/* line 19, ../sass/thank-you.scss */
 .record-player:hover .top .record img {
   -webkit-animation-name: rotate;
   -webkit-animation-duration: 5s;
@@ -2012,7 +2018,7 @@ table.hide-for-medium {
   animation-timing-function: linear;
   animation-iteration-count: infinite;
 }
-/* line 20, ../sass/thank-you.scss */
+/* line 23, ../sass/thank-you.scss */
 .record-player:hover .top .tone-arm .arm {
   -webkit-transform: rotate(30deg);
   -moz-transform: rotate(30deg);
@@ -2020,11 +2026,11 @@ table.hide-for-medium {
   -o-transform: rotate(30deg);
   transform: rotate(30deg);
 }
-/* line 26, ../sass/thank-you.scss */
+/* line 29, ../sass/thank-you.scss */
 .record-player:hover .bottom .right .record-button:nth-child(1) {
   background: #999999;
 }
-/* line 31, ../sass/thank-you.scss */
+/* line 34, ../sass/thank-you.scss */
 .record-player .top {
   *zoom: 1;
   background: #cccccc;
@@ -2041,13 +2047,13 @@ table.hide-for-medium {
 .record-player .top:after {
   clear: both;
 }
-/* line 37, ../sass/thank-you.scss */
+/* line 40, ../sass/thank-you.scss */
 .record-player .top .speed-adjust {
   float: left;
   display: block;
   width: 30px;
 }
-/* line 41, ../sass/thank-you.scss */
+/* line 44, ../sass/thank-you.scss */
 .record-player .top .speed-adjust .circle {
   background: black;
   width: 30px;
@@ -2058,12 +2064,12 @@ table.hide-for-medium {
   -o-border-radius: 50%;
   border-radius: 50%;
 }
-/* line 48, ../sass/thank-you.scss */
+/* line 51, ../sass/thank-you.scss */
 .record-player .top .record {
   float: left;
   width: 75%;
 }
-/* line 51, ../sass/thank-you.scss */
+/* line 54, ../sass/thank-you.scss */
 .record-player .top .record img {
   display: inline-block;
   position: relative;
@@ -2073,7 +2079,7 @@ table.hide-for-medium {
   -o-transition: 0.5s;
   transition: 0.5s;
 }
-/* line 58, ../sass/thank-you.scss */
+/* line 61, ../sass/thank-you.scss */
 .record-player .top .tone-arm {
   width: 98px;
   height: 98px;
@@ -2084,13 +2090,13 @@ table.hide-for-medium {
   top: 15px;
 }
 @media only screen and (min-width: 0px) and (max-width: 600px), only screen and (min-device-width: 0px) and (max-device-width: 600px) {
-  /* line 58, ../sass/thank-you.scss */
+  /* line 61, ../sass/thank-you.scss */
   .record-player .top .tone-arm {
     width: 68px;
     height: 68px;
   }
 }
-/* line 70, ../sass/thank-you.scss */
+/* line 73, ../sass/thank-you.scss */
 .record-player .top .tone-arm .circle {
   background: #cccccc;
   width: 40px;
@@ -2107,7 +2113,7 @@ table.hide-for-medium {
   -o-border-radius: 50%;
   border-radius: 50%;
 }
-/* line 82, ../sass/thank-you.scss */
+/* line 85, ../sass/thank-you.scss */
 .record-player .top .tone-arm .arm {
   position: absolute;
   width: 86.73469%;
@@ -2125,7 +2131,7 @@ table.hide-for-medium {
   -o-transform-origin: 50% 27%;
   transform-origin: 50% 27%;
 }
-/* line 94, ../sass/thank-you.scss */
+/* line 97, ../sass/thank-you.scss */
 .record-player .bottom {
   background: #b3b3b3;
   padding: 6px;
@@ -2140,7 +2146,7 @@ table.hide-for-medium {
 .record-player .bottom:after {
   clear: both;
 }
-/* line 98, ../sass/thank-you.scss */
+/* line 101, ../sass/thank-you.scss */
 .record-player .bottom .record-button {
   height: 28px;
   width: 50px;
@@ -2152,25 +2158,25 @@ table.hide-for-medium {
   -o-transition: 0.2s;
   transition: 0.2s;
 }
-/* line 106, ../sass/thank-you.scss */
+/* line 109, ../sass/thank-you.scss */
 .record-player .bottom .left {
   text-align: left;
   float: left;
 }
-/* line 110, ../sass/thank-you.scss */
+/* line 113, ../sass/thank-you.scss */
 .record-player .bottom .right {
   float: right;
   text-align: right;
 }
 @media only screen and (min-width: 0px) and (max-width: 767px), only screen and (min-device-width: 0px) and (max-device-width: 767px) {
-  /* line 114, ../sass/thank-you.scss */
+  /* line 117, ../sass/thank-you.scss */
   .record-player .bottom .right .record-button:nth-child(3), .record-player .bottom .right .record-button:nth-child(4) {
     display: none;
   }
 }
 
 @-webkit-keyframes rotate {
-  /* line 125, ../sass/thank-you.scss */
+  /* line 128, ../sass/thank-you.scss */
   0% {
     -webkit-transform: rotate(0);
     -moz-transform: rotate(0);
@@ -2179,7 +2185,7 @@ table.hide-for-medium {
     transform: rotate(0);
   }
 
-  /* line 128, ../sass/thank-you.scss */
+  /* line 131, ../sass/thank-you.scss */
   100% {
     -webkit-transform: rotate(359deg);
     -moz-transform: rotate(359deg);
@@ -2190,7 +2196,7 @@ table.hide-for-medium {
 }
 
 @-moz-keyframes rotate {
-  /* line 125, ../sass/thank-you.scss */
+  /* line 128, ../sass/thank-you.scss */
   0% {
     -webkit-transform: rotate(0);
     -moz-transform: rotate(0);
@@ -2199,7 +2205,7 @@ table.hide-for-medium {
     transform: rotate(0);
   }
 
-  /* line 128, ../sass/thank-you.scss */
+  /* line 131, ../sass/thank-you.scss */
   100% {
     -webkit-transform: rotate(359deg);
     -moz-transform: rotate(359deg);
@@ -2210,7 +2216,7 @@ table.hide-for-medium {
 }
 
 @-o-keyframes rotate {
-  /* line 125, ../sass/thank-you.scss */
+  /* line 128, ../sass/thank-you.scss */
   0% {
     -webkit-transform: rotate(0);
     -moz-transform: rotate(0);
@@ -2219,7 +2225,7 @@ table.hide-for-medium {
     transform: rotate(0);
   }
 
-  /* line 128, ../sass/thank-you.scss */
+  /* line 131, ../sass/thank-you.scss */
   100% {
     -webkit-transform: rotate(359deg);
     -moz-transform: rotate(359deg);
@@ -2230,7 +2236,7 @@ table.hide-for-medium {
 }
 
 @keyframes rotate {
-  /* line 125, ../sass/thank-you.scss */
+  /* line 128, ../sass/thank-you.scss */
   0% {
     -webkit-transform: rotate(0);
     -moz-transform: rotate(0);
@@ -2239,7 +2245,7 @@ table.hide-for-medium {
     transform: rotate(0);
   }
 
-  /* line 128, ../sass/thank-you.scss */
+  /* line 131, ../sass/thank-you.scss */
   100% {
     -webkit-transform: rotate(359deg);
     -moz-transform: rotate(359deg);
@@ -2249,47 +2255,47 @@ table.hide-for-medium {
   }
 }
 
-/* line 133, ../sass/thank-you.scss */
+/* line 136, ../sass/thank-you.scss */
 .twitter {
   width: 33.33333%;
 }
 @media only screen and (max-width: 767px) {
-  /* line 133, ../sass/thank-you.scss */
+  /* line 136, ../sass/thank-you.scss */
   .twitter {
     float: none;
     width: auto;
   }
 }
 @media only screen and (min-width: 0px) and (max-width: 767px), only screen and (min-device-width: 0px) and (max-device-width: 767px) {
-  /* line 133, ../sass/thank-you.scss */
+  /* line 136, ../sass/thank-you.scss */
   .twitter {
     margin-top: 40px;
   }
 }
-/* line 138, ../sass/thank-you.scss */
+/* line 141, ../sass/thank-you.scss */
 .twitter iframe {
   margin: 0 auto;
   display: block;
 }
 
-/* line 144, ../sass/thank-you.scss */
+/* line 147, ../sass/thank-you.scss */
 .full-list {
   margin-top: 40px;
   margin-bottom: 40px;
   width: 100%;
 }
 @media only screen and (max-width: 767px) {
-  /* line 144, ../sass/thank-you.scss */
+  /* line 147, ../sass/thank-you.scss */
   .full-list {
     float: none;
     width: auto;
   }
 }
-/* line 148, ../sass/thank-you.scss */
+/* line 151, ../sass/thank-you.scss */
 .full-list h6 {
   margin-bottom: 4px;
 }
-/* line 151, ../sass/thank-you.scss */
+/* line 154, ../sass/thank-you.scss */
 .full-list p {
   font-size: .8em;
 }

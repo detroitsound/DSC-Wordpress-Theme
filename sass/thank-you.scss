@@ -11,6 +11,9 @@
 
 .record-player {
     @include column(8);
+    @media only screen and (min-width: 768px) {
+        @include push(2);
+    }
     &:hover {
         .top {
             .record img {
