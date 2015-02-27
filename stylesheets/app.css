@@ -3468,8 +3468,10 @@ $position: The placement of the background in relation to its div
 /* line 74, ../sass/_artifact.scss */
 .single-artifact .artifact .metadata .metadata-item {
   margin-bottom: 5px;
+  font-size: .85em;
+  line-height: 1.1em;
 }
-/* line 77, ../sass/_artifact.scss */
+/* line 79, ../sass/_artifact.scss */
 .single-artifact .artifact .metadata strong {
   margin-right: 5px;
   display: inline-block;
