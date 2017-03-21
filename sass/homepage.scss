@@ -23,6 +23,8 @@
         @include background-size(100% auto);
         background-position:   center center;
         background-repeat:     no-repeat;
+        padding-top: percentage(628 / 1200);
+        position: relative;
 
         &.no-image {
             background-color: $red;
@@ -30,26 +32,19 @@
     }
     .post_content {
         @include outerRow();
-        padding-top:    100px;
-        padding-bottom: 100px;
-        display:        table;
-        @include media-query(1000px, 768px) {
-            width: 100%;
-        }
-        @include media-query() {
-            width:   100%;
-            padding: 60px $columnGutter/2;
-        }
-        .align-content {
-            display:        table-cell;
-            vertical-align: middle;
-            text-align:     center;
-        }
+        @include translate(-50%, -50%);
+        padding-top: $columnGutter/2;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        text-align: center;
     }
 
-    h1, p {
-        color: $white;
+    h1, a, p {
         text-shadow: 0 0 7px $black;
+        &, &:hover {
+            color: $white;
+        }
     }
 
     h1 {
